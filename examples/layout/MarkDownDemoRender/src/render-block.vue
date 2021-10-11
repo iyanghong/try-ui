@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-block">
+  <div :class="['demo-block',blockClass]">
     <div class="demo-block-source">
       <slot name="source"></slot>
       <span class="demo-block-code-icon"
@@ -26,11 +26,17 @@
 
 <script>
 import 'highlight.js/styles/color-brewer.css';
+
 export default {
   name: "render-block",
   data() {
     return {
       showCode: false
+    }
+  },
+  computed: {
+    blockClass() {
+      return `demo-${this.$router.currentRoute.path.split('/').pop()}`;
     }
   },
   created() {
