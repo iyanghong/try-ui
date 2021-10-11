@@ -61,15 +61,19 @@ module.exports = {
         'generator-star-spacing': 'off',
         'no-console': 'off', // 禁用no-console规则
         'semi': 0, // 行尾不使用分号
-        'quotes':0, // 字符串必须要单引号
-        'object-curly-spacing':0,
-        'eol-last':0,   //文件最后需要换行
+        'quotes': 0, // 字符串必须要单引号
+        'object-curly-spacing': 0,
+        'eol-last': 0,   //文件最后需要换行
         'comma-dangle': ['error'],
         'eqeqeq': 0, // 不需要强制使用全等
-        'space-before-function-paren':0,//在方法名和刮号之间需要有一格空格
+        'space-before-function-paren': 0,//在方法名和刮号之间需要有一格空格
         'max-len': 0,
-        'no-multiple-empty-lines' :0,
-        'import/extensions' : '0',//强制输入文件后缀名
+        'no-multiple-empty-lines': 0,
+        'no-void': 0,
+        'padded-blocks': 0,
+        'spaced-comment':0,
+        'array-callback-return':0,
+        'import/extensions': '0',//强制输入文件后缀名
         'radix': 0,// parseInt不需要传第二个参数
         'linebreak-style': 0, // 强制执行一致的换行样式，windows和mac不一样
         'consistent-return': 0, // 箭头函数最后不需要最后强制return值

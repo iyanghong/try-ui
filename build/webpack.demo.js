@@ -22,11 +22,12 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
+            '@' : path.resolve(process.cwd(),'./examples')
         }
     },
     output: {
         path: path.resolve(process.cwd(), './examples/dist/'),
-        publicPath: process.env.CI_ENV || '',
+        publicPath: process.env.CI_ENV || '/',
         filename: '[name].[hash:7].js',
         chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
     },

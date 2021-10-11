@@ -40,6 +40,7 @@ export const isUndefined = (val) => {
 export const isDefined = (val) => {
     return val !== undefined && val !== null;
 };
+
 export function isPromise(obj) {
 
     return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';

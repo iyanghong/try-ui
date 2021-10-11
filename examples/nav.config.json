@@ -1,0 +1,18 @@
+{
+  "zh-CN": [
+    {
+      "groupLabel": "表单",
+      "groupName": "Form",
+      "children": [
+        {
+          "path": "/input",
+          "title": "输入框"
+        },
+        {
+          "path": "/radio",
+          "title": "单选框"
+        }
+      ]
+    }
+  ]
+}

@@ -1,16 +1,19 @@
 //base color
-$red:#FF5722;		//赤色
-$orange:#FFB800; 	//橙色
-$green:#009688;		//墨绿
-$cyan:#2F4056;		//藏青
-$blue:#1E9FFF;		//蓝色
-$black:#393D49;		//雅黑
-$gray:#666;			//银灰
-$success:#67C23A;	//成功辅助色
-$warning:#E6A23C;	//警告辅助色
-$danger:#F56C6C;	//危险辅助色
-$info:#79a1eb;
+$red: #FF5722; //赤色
+$orange: #FFB800; //橙色
+$green: #009688; //墨绿
+$cyan: #2F4056; //藏青
+$blue: #1E9FFF; //蓝色
+$black: #393D49; //雅黑
+$gray: #666; //银灰
+$success: #67C23A; //成功辅助色
+$warning: #E6A23C; //警告辅助色
+$danger: #F56C6C; //危险辅助色
+$info: #79a1eb;
 
+$fontColor:#444;
+
+$border-color: rgb(239, 239, 245);
 
 $--sm: 768px !default;
 $--md: 992px !default;
