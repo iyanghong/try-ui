@@ -5,6 +5,7 @@
 import navConfig from './nav.config.json';
 import {isArray} from "../src/utils/types";
 
+
 const modulesFiles = require.context('./docs', true, /\.md$/)
 const docKeys = modulesFiles.keys();
 
@@ -45,11 +46,20 @@ const registerRoute = function (navConfig) {
 }
 
 let routes = registerRoute(navConfig);
+let defaultPath = '/components/input';
+
 export default [
     {
         path: '/components',
         name: 'Examples',
         component: () => import('./layout/index'),
         children: routes
+    },
+    {
+        path: '/',
+        redirect: defaultPath
+    }, {
+        path: '*',
+        redirect: defaultPath
     }
 ];

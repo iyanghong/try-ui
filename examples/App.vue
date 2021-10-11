@@ -11,7 +11,6 @@
             return {}
         },
       created() {
-        console.log('111')
       }
     }
 </script>
