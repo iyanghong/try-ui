@@ -62,7 +62,7 @@ module.exports = {
                     { loader: 'sass-resources-loader',
                         options: {
                             sourceMap: true,
-                            resources:[path.resolve(__dirname, '../src/styles/variables.scss'),]//一定是path.resolve的绝对路径
+                            resources:[path.resolve(__dirname, '../src/theme/common/variables.scss'),]//一定是path.resolve的绝对路径
                         }
                     }
                 ]

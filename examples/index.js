@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from "./router";
-import MarkdownDemoRender from './layout/MarkDownDemoRender'
-import TryUi from '../src/index'
+import MarkdownDemoRender from './layout/MarkDownDemoRender';
+import TryUi from '../src/index';
+import '../src/theme/input.scss';
 
 console.log(TryUi)
 Vue.component('markdown-demo-render-block', MarkdownDemoRender)
