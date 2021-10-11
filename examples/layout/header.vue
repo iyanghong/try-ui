@@ -13,7 +13,7 @@
     <div class="header-right header-nav">
       <div class="header-nav-item"><a href="">English</a></div>
       <div class="header-nav-item"><a href="">主题</a></div>
-      <div class="header-nav-item"><a href="">GitHub</a></div>
+      <div class="header-nav-item"><a href="https://github.com/iyanghong/try-ui">GitHub</a></div>
     </div>
   </div>
 </template>
