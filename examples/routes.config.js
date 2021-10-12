@@ -9,6 +9,13 @@ import {isArray} from "../src/utils/types";
 const modulesFiles = require.context('./docs', true, /\.md$/)
 const docKeys = modulesFiles.keys();
 
+const loadComponent = function (component) {
+    return r => require.ensure([], () =>
+            r(require(`./components/${component}.vue`)),
+        'zh-CN');
+}
+
+
 const registerRoute = function (navConfig) {
     let routes = [];
     Object.keys(navConfig).forEach((lang, index) => {
@@ -27,9 +34,14 @@ const registerRoute = function (navConfig) {
     })
 
     function addRoute(page, index) {
-        let path = `.${page.path}.md`;
-        if (docKeys.indexOf(path) === -1) return;
-        const component = modulesFiles(path);
+        let component;
+        if (page.component) {
+            component = loadComponent(page.component);
+        } else {
+            let path = `.${page.path}.md`;
+            if (docKeys.indexOf(path) === -1) return;
+            component = modulesFiles(path);
+        }
         let route = {
             path: page.path.slice(1),
             meta: {
@@ -41,7 +53,6 @@ const registerRoute = function (navConfig) {
         };
         index === -1 ? routes.push(route) : routes[index].children.push(route);
     }
-
     return routes;
 }
 

@@ -1,6 +1,11 @@
 {
   "zh-CN": [
     {
+      "path": "/color",
+      "title": "颜色",
+      "component" : "color"
+    },
+    {
       "groupLabel": "表单",
       "groupName": "Form",
       "children": [
