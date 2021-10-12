@@ -50,7 +50,7 @@ export default {
   right: 0;
   border-bottom: 1px solid $border-color;
   @include headerFlex;
-  color: $fontColor;
+  color: $text-color;
   justify-content: space-between;
 
   .header-left,.header-right {
