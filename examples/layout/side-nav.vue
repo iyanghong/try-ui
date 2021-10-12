@@ -11,7 +11,7 @@
       </template>
       <template v-else>
         <div class="nav-item" :key="index">
-          <a :class="{'active':routePath === nav.path}" :href="'/components' + nav.path">{{ nav.title }}</a>
+          <a :class="{'active':routePath === group.path}" :href="'/components' + group.path">{{ group.title }}</a>
         </div>
       </template>
     </template>
