@@ -1,0 +1,71 @@
+@import "./mixins/mixins.scss";
+
+.t-col-0 {
+  display: none;
+}
+
+[class*="t-col-"] {
+  float: left;
+  box-sizing: border-box;
+}
+
+@for $i from 0 through 24 {
+  .t-col-#{$i} {
+    width: (1 / 24 * $i * 100) * 1%;
+  }
+}
+
+@include responsive(xs) {
+  .t-col-xs-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .t-col-xs-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include responsive(sm) {
+  .t-col-sm-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .t-col-sm-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include responsive(md) {
+  .t-col-md-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .t-col-md-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include responsive(lg) {
+  .t-col-lg-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .t-col-lg-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include responsive(xl) {
+  .t-col-xl-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .t-col-xl-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
