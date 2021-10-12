@@ -19,9 +19,9 @@
 }
 .t-success {
   .t-input--inner {
-    border-color: $success;
+    border-color: $success-color;
     &:hover, &:focus {
-      border-color: $success;
+      border-color: $success-color;
     }
   }
 }
