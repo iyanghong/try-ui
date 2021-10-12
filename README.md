@@ -29,7 +29,7 @@ Modern browsers and Internet Explorer 10+.
 
 ## Development
 Skip this part if you just want to use Element.
-For those who are interested in contributing to Element, please refer to our contributing guide ([贡献者文档](https://github.com/iyanghong/try-ui/master/.github/contributor.md)) to see how to run this project.
+For those who are interested in contributing to Element, please refer to our contributing guide ([贡献者文档](https://github.com/iyanghong/try-ui/blob/master/.github/contributor.md)) to see how to run this project.
 
 
 ## LICENSE
