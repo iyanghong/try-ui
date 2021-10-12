@@ -7,8 +7,8 @@
     "dev": "webpack-dev-server --inline --config ./build/webpack.demo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Vue","UI库","Try UI"],
+  "author": "iyanghong",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -46,5 +46,12 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "一个网站快速构建UI库"
   }
 }
