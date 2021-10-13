@@ -2,7 +2,7 @@
 	<div class="examples-layout">
 		<main-header></main-header>
 		<side-nav :data="navList"></side-nav>
-		<div class="container markdown-body">
+		<div :class="['container', isMarkdown ? 'markdown-body' : '']">
 			<router-view></router-view>
 		</div>
 	</div>
@@ -16,6 +16,11 @@ export default {
 	data() {
 		return {
 			navList: NavConfig['zh-CN']
+		}
+	},
+	computed: {
+		isMarkdown() {
+			return this.$route.meta.isMarkdown;
 		}
 	},
 	created() {
@@ -33,7 +38,8 @@ export default {
 .examples-layout {
 	display: flex;
 	flex-wrap: nowrap;
-	h1,h2,h3,h4,h5,h6{
+
+	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
 		color: #1f2f3d;
 	}
