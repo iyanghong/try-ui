@@ -1,3 +1,5 @@
+@import "./common/variables.scss";
+
 .t-input--inner {
   width: 100%;
   background-color: #fff;
@@ -17,14 +19,21 @@
     border-color: #79a1eb;
   }
 }
-.t-success {
-  .t-input--inner {
-    border-color: $success-color;
-    &:hover, &:focus {
-      border-color: $success-color;
-    }
-  }
+@mixin input-status-color($status,$color){
+	.t-#{$status} {
+		.t-input--inner {
+			border-color: #{$color};
+			&:hover, &:focus {
+				border-color: #{$color};
+			}
+		}
+	}
 }
+
+@include input-status-color(success,$success-color);
+@include input-status-color(warning,$warning-color);
+@include input-status-color(danger,$danger-color);
+
 .t-input--disabled .t-input--inner {
   color: #b1b1b1;
   background-color: #f7f7f7;
