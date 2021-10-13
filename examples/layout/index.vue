@@ -2,7 +2,7 @@
 	<div class="examples-layout">
 		<main-header></main-header>
 		<side-nav :data="navList"></side-nav>
-		<div class="container">
+		<div class="container markdown-body">
 			<router-view></router-view>
 		</div>
 	</div>
@@ -33,6 +33,10 @@ export default {
 .examples-layout {
 	display: flex;
 	flex-wrap: nowrap;
+	h1,h2,h3,h4,h5,h6{
+		font-weight: 400;
+		color: #1f2f3d;
+	}
 
 	.side-nav {
 		top: 61px;

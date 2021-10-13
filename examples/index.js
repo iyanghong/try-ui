@@ -8,7 +8,7 @@ import MainHeader from './layout/header';
 import Search from './layout/search'
 import '../src/theme/input.scss';
 import './styles/index.scss';
-
+import 'github-markdown-css/github-markdown.css'
 console.log(TryUi)
 Vue.component('markdown-demo-render-block', MarkdownDemoRender)
 Vue.component('side-nav', SideNav)
