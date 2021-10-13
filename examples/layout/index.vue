@@ -1,47 +1,49 @@
 <template>
-  <div class="examples-layout">
-    <main-header></main-header>
-    <side-nav :data="navList"></side-nav>
-    <div class="container">
-      <router-view></router-view>
-    </div>
-  </div>
+	<div class="examples-layout">
+		<main-header></main-header>
+		<side-nav :data="navList"></side-nav>
+		<div class="container">
+			<router-view></router-view>
+		</div>
+	</div>
 </template>
 
 <script>
 import NavConfig from '../nav.config.json'
 
 export default {
-  name: "index",
-  data() {
-    return {
-      navList: NavConfig['zh-CN']
-    }
-  },
-  created() {
-  }
+	name: "index",
+	data() {
+		return {
+			navList: NavConfig['zh-CN']
+		}
+	},
+	created() {
+	}
 
 }
 </script>
 
 <style lang="scss">
-*{
-  padding: 0;
-  margin: 0;
+* {
+	padding: 0;
+	margin: 0;
 }
+
 .examples-layout {
-  display: flex;
-  flex-wrap: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
 
-  .side-nav {
-    top: 61px;
-  }
+	.side-nav {
+		top: 61px;
+	}
 
-  .container {
-    width: 100%;
-    margin-left: 200px;
-    margin-top: 60px;
-    padding: 20px;
-  }
+	.container {
+		width: 100%;
+		margin-left: 200px;
+		margin-top: 60px;
+		padding: 20px;
+		box-sizing: border-box;
+	}
 }
 </style>
