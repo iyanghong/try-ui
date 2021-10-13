@@ -75,6 +75,7 @@ module.exports = {
 		'padded-blocks': 0,
 		'spaced-comment': 0,
 		'array-callback-return': 0,
+		'no-mixed-spaces-and-tabs': 0,
 		'import/extensions': 0, //强制输入文件后缀名
 		'radix': 0, // parseInt不需要传第二个参数
 		'linebreak-style': 0, // 强制执行一致的换行样式，windows和mac不一样
