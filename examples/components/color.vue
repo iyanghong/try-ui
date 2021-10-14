@@ -50,6 +50,7 @@ export default {
 	display: flex;
 	list-style: none;
 	flex-wrap: wrap;
+
 	li {
 		width: 150px;
 		height: 80px;
@@ -68,51 +69,51 @@ export default {
 	}
 
 	.brand-color {
-		background-color: $blue;
+		background-color: $--color-blue;
 	}
 
 	.success-color {
-		background-color: $success-color;
+		background-color: $--color-success;
 	}
 
 	.warning-color {
-		background-color: $warning-color;
+		background-color: $--color-warning;
 	}
 
 	.danger-color {
-		background-color: $danger-color;
+		background-color: $--color-danger;
 	}
 
 	.info-color {
-		background-color: $info;
+		background-color: $--color-info;
 	}
 
 	.red-color {
-		background-color: $red;
+		background-color: $--color-red;
 	}
 
 	.orange-color {
-		background-color: $orange;
+		background-color: $--color-orange;
 	}
 
 	.green-color {
-		background-color: $green;
+		background-color: $--color-green;
 	}
 
 	.cyan-color {
-		background-color: $cyan;
+		background-color: $--color-cyan;
 	}
 
 	.blue-color {
-		background-color: $blue;
+		background-color: $--color-blue;
 	}
 
 	.black-color {
-		background-color: $black;
+		background-color: $--color-black;
 	}
 
 	.gray-color {
-		background-color: $gray;
+		background-color: $--color-gray;
 	}
 }
 </style>
