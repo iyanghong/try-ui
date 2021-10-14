@@ -2,7 +2,7 @@
 	<div class="examples-layout">
 		<main-header></main-header>
 		<side-nav :data="navList"></side-nav>
-		<div :class="['container', isMarkdown ? 'markdown-body' : '']">
+		<div :class="['container', isMarkdown ? 'markdown-body' : '',componentsClass]">
 			<router-view></router-view>
 		</div>
 	</div>
@@ -21,10 +21,14 @@ export default {
 	computed: {
 		isMarkdown() {
 			return this.$route.meta.isMarkdown;
+		},
+		componentsClass() {
+			return 'demo-' + this.$route.path.slice(1).replace('/', '-') + '-body';
 		}
 	},
 	created() {
-	}
+	},
+	methods: {}
 
 }
 </script>
