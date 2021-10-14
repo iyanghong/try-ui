@@ -1,18 +1,17 @@
 //base color
-$red: #FF4500; //赤色
-$orange: #FF8C00; //橙色
-$green: #009688; //墨绿
-$cyan: #2F4056; //藏青
-$blue: #1E9FFF; //蓝色
-$black: #393D49; //雅黑
-$gray: #666; //银灰
+$--color-red: #FF4500; //赤色
+$--color-orange: #FF8C00; //橙色
+$--color-green: #009688; //墨绿
+$--color-cyan: #2F4056; //藏青
+$--color-blue: #1E9FFF; //蓝色
+$--color-black: #393D49; //雅黑
+$--color-gray: #666; //银灰
 
-$success-color: #36ad6a; //成功辅助色
-$warning-color: #fcb040; //警告辅助色
-$danger-color: #d03050; //危险辅助色
-
-$info: #95949A;
-
+$--color-success: #36ad6a; //成功辅助色
+$--color-warning: #fcb040; //警告辅助色
+$--color-danger: #d03050; //危险辅助色
+$--color-info: #95949A;
+$--color-text-placeholder: #C0C4CC;
 $text-color: #444;
 
 $border-color: #EFEFF5;
@@ -23,9 +22,24 @@ $--lg: 1200px !default;
 $--xl: 1920px !default;
 
 $breakpoints: (
-  'xs' : (max-width: $--sm - 1),
-  'sm' : (min-width: $--sm),
-  'md' : (min-width: $--md),
-  'lg' : (min-width: $--lg),
-  'xl' : (min-width: $--xl)
+	'xs' : (max-width: $--sm - 1),
+	'sm' : (min-width: $--sm),
+	'md' : (min-width: $--md),
+	'lg' : (min-width: $--lg),
+	'xl' : (min-width: $--xl)
 );
+
+$state-prefix: 'is-';
+
+$--background-color-base: #F5F7FA !default;
+$--border-radius-base: 4px !default;
+//Input
+$--input-default-height: 40px;
+$--input-border-radius: $--border-radius-base;
+
+$--input-medium-font-size: 14px !default;
+$--input-medium-height: 36px !default;
+$--input-small-font-size: 13px !default;
+$--input-small-height: 32px !default;
+$--input-mini-font-size: 12px !default;
+$--input-mini-height: 28px !default;

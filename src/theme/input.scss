@@ -1,28 +1,34 @@
 @import "./common/variables.scss";
 
 .t-input--inner {
-  width: 100%;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #dcdfe6;
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #606266;
-  display: inline-block;
-  font-size: inherit;
-  outline: none;
-  padding: 0 15px;
-  height: 32px;
-  line-height: 32px;
+	width: 100%;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #dcdfe6;
+	border-radius: $--input-border-radius;
+	box-sizing: border-box;
+	color: #606266;
+	display: inline-block;
+	padding: 0 16px;
+	font-size: inherit;
+	outline: none;
+	height: $--input-default-height;
+	line-height: $--input-default-height;
 
-  &:hover, &:focus {
-    border-color: #79a1eb;
-  }
+	&:hover, &:focus {
+		border-color: #79a1eb;
+	}
+
+	&::-webkit-input-placeholder {
+		font-size: 0.8em;
+	}
 }
-@mixin input-status-color($status,$color){
+
+@mixin input-status-color($status,$color) {
 	.t-#{$status} {
 		.t-input--inner {
 			border-color: #{$color};
+
 			&:hover, &:focus {
 				border-color: #{$color};
 			}
@@ -30,13 +36,159 @@
 	}
 }
 
-@include input-status-color(success,$success-color);
-@include input-status-color(warning,$warning-color);
-@include input-status-color(danger,$danger-color);
+@include input-status-color(success, $--color-success);
+@include input-status-color(warning, $--color-warning);
+@include input-status-color(danger, $--color-danger);
 
 .t-input--disabled .t-input--inner {
-  color: #b1b1b1;
-  background-color: #f7f7f7;
-  border-color: #ececec;
-  cursor: not-allowed;
+	color: #b1b1b1;
+	background-color: #f7f7f7;
+	border-color: #ececec;
+	cursor: not-allowed;
+}
+
+.t-input {
+	&.t-input--group-prefix {
+		position: relative;
+
+		.t-input--prefix {
+			height: 100%;
+			position: absolute;
+			left: 5px;
+			top: 0;
+			color: #c0c4cc;
+
+
+		}
+
+		.t-input--inner {
+			padding-left: 25px;
+		}
+	}
+
+	&.t-input--group-suffix .t-input--suffix,
+	&.t-input--group-prefix .t-input--prefix {
+		i {
+			line-height: $--input-default-height;
+		}
+	}
+
+	&.t-input--group-suffix {
+		position: relative;
+
+		.t-input--suffix {
+			height: 100%;
+			position: absolute;
+			right: 5px;
+			top: 0;
+			color: #c0c4cc;
+		}
+
+		.t-input--inner {
+			padding-right: 25px;
+		}
+	}
+
+	&.t-input-group {
+		line-height: normal;
+		display: inline-table;
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+
+		.t-input--inner {
+			display: table-cell;
+		}
+
+		.t-input--prepend, .t-input--append {
+			background-color: $--background-color-base;
+			color: $--color-info;
+			vertical-align: middle;
+			display: table-cell;
+			position: relative;
+			border: 1px solid $--color-text-placeholder;
+			border-radius: $--input-border-radius;
+			padding: 0 10px;
+			width: 1px;
+			white-space: nowrap;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.t-input--prepend {
+			border-right: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+
+			.t-input--inner {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		.t-input--append {
+			border-left: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+
+			.t-input--inner {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+}
+
+
+
+.t-input--medium {
+
+	font-size: $--input-medium-font-size;
+
+	.t-input--inner {
+		height: $--input-medium-height;
+		line-height: $--input-medium-height;
+	}
+
+	&.t-input--group-suffix .t-input--suffix,
+	&.t-input--group-prefix .t-input--prefix {
+		i {
+			line-height: $--input-medium-height;
+		}
+	}
+}
+
+.t-input--small {
+	font-size: $--input-small-font-size;
+
+	.t-input--inner {
+		height: $--input-small-height;
+		line-height: $--input-small-height;
+	}
+
+	&.t-input--group-suffix .t-input--suffix,
+	&.t-input--group-prefix .t-input--prefix {
+		i {
+			line-height: $--input-small-height;
+		}
+	}
+}
+
+.t-input--mini {
+
+	font-size: $--input-mini-font-size;
+
+	.t-input--inner {
+		height: $--input-mini-height;
+		line-height: $--input-mini-height;
+	}
+
+	&.t-input--group-suffix .t-input--suffix,
+	&.t-input--group-prefix .t-input--prefix {
+		i {
+			line-height: $--input-mini-height;
+		}
+	}
 }
