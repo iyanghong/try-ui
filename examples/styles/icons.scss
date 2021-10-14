@@ -1,0 +1,52 @@
+.demo-components-icons-body {
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	li {
+		float: left;
+		width: 16.66%;
+		text-align: center;
+		height: 120px;
+		color: #666;
+		font-size: 13px;
+		border-right: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		margin-right: -1px;
+		margin-bottom: -1px;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		align-content: center;
+		i{
+			color: #606266;
+			margin: 0 20px;
+			font-size: 2em;
+			transition: color 0.15s linear;
+		}
+		div.icon{
+			margin-bottom: 20px;
+		}
+		div.name,div.code-name{
+			line-height: 1.2;
+		}
+		&:hover {
+			div,
+			span,
+			i {
+				color: rgb(92, 182, 255);
+			}
+		}
+	}
+
+}
+
+
+.demo-block.demo-icons .source >  i {
+	color: #606266;
+	font-size: 2em;
+	vertical-align: middle;
+	margin-right: 20px;
+}

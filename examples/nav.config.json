@@ -1,23 +1,27 @@
 {
-  "zh-CN": [
-    {
-      "path": "/color",
-      "title": "颜色",
-      "component" : "color"
-    },
-    {
-      "groupLabel": "表单",
-      "groupName": "Form",
-      "children": [
-        {
-          "path": "/input",
-          "title": "输入框"
-        },
-        {
-          "path": "/radio",
-          "title": "单选框"
-        }
-      ]
-    }
-  ]
+	"zh-CN": [
+		{
+			"path": "/color",
+			"title": "颜色",
+			"component": "color"
+		},
+		{
+			"groupLabel": "表单",
+			"groupName": "Form",
+			"children": [
+				{
+					"path": "/icons",
+					"title": "图标"
+				},
+				{
+					"path": "/input",
+					"title": "输入框"
+				},
+				{
+					"path": "/radio",
+					"title": "单选框"
+				}
+			]
+		}
+	]
 }

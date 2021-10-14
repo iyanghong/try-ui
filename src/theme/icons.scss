@@ -1,0 +1,310 @@
+@font-face {
+	font-family: "try-icons"; /* Project id 2691957 */
+	src: url('fonts/try-ui-icons.woff') format('woff'),
+		 url('fonts/try-ui-icons.ttf') format('truetype');
+	font-weight: normal;
+	font-display: auto;
+	font-style: normal;
+}
+
+[class^="t-icon-"], [class*=" t-icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'try-icons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: baseline;
+	display: inline-block;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.t-icon-label:before {
+	content: "\eabd";
+}
+
+.t-icon-save:before {
+	content: "\eabe";
+}
+
+.t-icon-edit:before {
+	content: "\eabf";
+}
+
+.t-icon-export:before {
+	content: "\eac0";
+}
+
+.t-icon-import:before {
+	content: "\eac1";
+}
+
+.t-icon-copy:before {
+	content: "\eac2";
+}
+
+.t-icon-unlock:before {
+	content: "\eac3";
+}
+
+.t-icon-suoding:before {
+	content: "\eac4";
+}
+
+.t-icon-paperclip:before {
+	content: "\eac5";
+}
+
+.t-icon-folder:before {
+	content: "\eac6";
+}
+
+.t-icon-play:before {
+	content: "\ead8";
+}
+
+.t-icon-kefu:before {
+	content: "\eada";
+}
+
+.t-icon-link:before {
+	content: "\eadc";
+}
+
+.t-icon-key:before {
+	content: "\eae6";
+}
+
+.t-icon-revoke:before {
+	content: "\eaf0";
+}
+
+.t-icon-home:before {
+	content: "\eaf1";
+}
+
+.t-icon-menu:before {
+	content: "\eaf2";
+}
+
+.t-icon-navigation:before {
+	content: "\eaf3";
+}
+
+.t-icon-plus:before {
+	content: "\eaf4";
+}
+
+.t-icon-minus:before {
+	content: "\eaf5";
+}
+
+.t-icon-view-matrix:before {
+	content: "\eafc";
+}
+
+.t-icon-refresh:before {
+	content: "\eafd";
+}
+
+.t-icon-tip:before {
+	content: "\eafe";
+}
+
+.t-icon-camera:before {
+	content: "\eb01";
+}
+
+.t-icon-apply:before {
+	content: "\eb02";
+}
+
+.t-icon-list-arrow-right:before {
+	content: "\eb03";
+}
+
+.t-icon-list-arrow-top:before {
+	content: "\eb04";
+}
+
+.t-icon-list-arrow-left:before {
+	content: "\eb05";
+}
+
+.t-icon-switch-arrow-down:before {
+	content: "\eb06";
+}
+
+.t-icon-list-arrow-down:before {
+	content: "\eb07";
+}
+
+.t-icon-switch-arrow-right:before {
+	content: "\eb08";
+}
+
+.t-icon-switch-arrow-top:before {
+	content: "\eb09";
+}
+
+.t-icon-switch-arrow-left:before {
+	content: "\eb0a";
+}
+
+.t-icon-pre:before {
+	content: "\eb0b";
+}
+
+.t-icon-arrow-o-left:before {
+	content: "\eb0c";
+}
+
+.t-icon-next:before {
+	content: "\eb0d";
+}
+
+.t-icon-arrow-right:before {
+	content: "\eb0e";
+}
+
+.t-icon-arrow-left:before {
+	content: "\eb0f";
+}
+
+.t-icon-arrow-switch:before {
+	content: "\eb10";
+}
+
+.t-icon-arrow-page-top:before {
+	content: "\eb11";
+}
+
+.t-icon-arrow-down:before {
+	content: "\eb12";
+}
+
+.t-icon-arrow-top:before {
+	content: "\eb13";
+}
+
+.t-icon-arrow-page-down:before {
+	content: "\eb14";
+}
+
+.t-icon-arrow-page-right:before {
+	content: "\eb15";
+}
+
+.t-icon-arrow-level-swtich:before {
+	content: "\eb16";
+}
+
+.t-icon-arrow-page-left:before {
+	content: "\eb17";
+}
+
+.t-icon-fullscreen:before {
+	content: "\eb18";
+}
+
+.t-icon-spread:before {
+	content: "\eb19";
+}
+
+.t-icon-upload:before {
+	content: "\eb1a";
+}
+
+.t-icon-overhead:before {
+	content: "\eb1b";
+}
+
+.t-icon-expression:before {
+	content: "\eb21";
+}
+
+.t-icon-user:before {
+	content: "\eb24";
+}
+
+.t-icon-share:before {
+	content: "\eb25";
+}
+
+.t-icon-user-group:before {
+	content: "\eb26";
+}
+
+.t-icon-collection:before {
+	content: "\eb27";
+}
+
+.t-icon-love:before {
+	content: "\eb28";
+}
+
+.t-icon-time:before {
+	content: "\eb2a";
+}
+
+.t-icon-calendar:before {
+	content: "\eb2b";
+}
+
+.t-icon-tree-view:before {
+	content: "\eb2c";
+}
+
+.t-icon-clound-upload:before {
+	content: "\eb2d";
+}
+
+.t-icon-clound-download:before {
+	content: "\eb2e";
+}
+
+.t-icon-line-chart:before {
+	content: "\eb2f";
+}
+
+.t-icon-bar-chart:before {
+	content: "\eb30";
+}
+
+.t-icon-hide:before {
+	content: "\eb45";
+}
+
+.t-icon-display:before {
+	content: "\eb46";
+}
+
+.t-icon-printer:before {
+	content: "\eb48";
+}
+
+.t-icon-bluetooth:before {
+	content: "\eb63";
+}
+
+.t-icon-tick:before {
+	content: "\e64f";
+}
+
+.t-icon-close:before {
+	content: "\e635";
+}
+
+.t-icon-rotate-reverse:before {
+	content: "\e608";
+}
+
+.t-icon-rotate:before {
+	content: "\e609";
+}
+
