@@ -1,0 +1,102 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+.t-button {
+	margin: 0;
+	height: $--button-default-height;
+	line-height: $--button-default-height;
+	padding: 0 12px;
+	white-space: nowrap;
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid #dcdfe6;
+	color: #606266;
+	-webkit-appearance: none;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 14px;
+	border-radius: 4px;
+
+	&:not(.is-disabled):hover {
+		background-color: #ecf5ff;
+		box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
+	}
+
+
+	& [class*="t-icon-"] {
+		& + span {
+			margin-left: 5px;
+		}
+	}
+
+	@mixin button-type($type,$backgroundColor,$hoverBackgroundColor) {
+		&.t-button--#{$type} {
+			background-color: $backgroundColor;
+			color: #ffffff;
+
+			&:not(.is-disabled):hover {
+				background-color: $hoverBackgroundColor;
+			}
+		}
+	}
+	@include button-type(primary, $--color-blue, $--button-primary-line);
+	@include button-type(success, $--color-success, $--button-success-line);
+	@include button-type(warning, $--color-warning, $--button-warning-line);
+	@include button-type(danger, $--color-danger, $--button-danger-line);
+
+	@mixin button-size($size,$font-size,$button-height) {
+		&.t-button--#{$size} {
+			height: $button-height;
+			line-height: $button-height;
+			font-size: $font-size;
+		}
+	}
+
+	@include button-size(medium, $--button-medium-font-size, $--button-medium-height);
+	@include button-size(small, $--button-small-font-size, $--button-small-height);
+	@include button-size(mini, $--button-mini-font-size, $--button-mini-height);
+
+	@include when(round) {
+		border-radius: 20px;
+		padding: 0 20px;
+	}
+
+	@include when(disabled) {
+		&,
+		&:hover,
+		&:focus {
+			opacity: 0.6;
+			cursor: not-allowed;
+			background-image: none;
+			border-color: #EBEEF5;
+		}
+	}
+
+}
+
+.t-button-group {
+	display: inline-block;
+	vertical-align: middle;
+
+	& > .t-button {
+		float: left;
+		position: relative;
+
+		&:first-child {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		&:not(:first-child):not(:last-child) {
+			border-radius: 0;
+		}
+		&:not(:last-child) {
+			margin-right: -2px;
+		}
+	}
+}
+

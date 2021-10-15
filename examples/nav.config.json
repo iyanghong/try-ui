@@ -18,6 +18,10 @@
 					"title": "输入框"
 				},
 				{
+					"path" : "/button",
+					"title" : "按钮"
+				},
+				{
 					"path": "/radio",
 					"title": "单选框"
 				}

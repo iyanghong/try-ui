@@ -1,0 +1,10 @@
+.demo-block.demo-button{
+	.t-button + .t-button{
+		margin-left: 10px;
+	}
+	.t-button-group{
+		.t-button{
+			margin: 0;
+		}
+	}
+}

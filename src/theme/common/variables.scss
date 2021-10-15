@@ -1,20 +1,20 @@
 //base color
-$--color-red: #FF4500; //赤色
-$--color-orange: #FF8C00; //橙色
-$--color-green: #009688; //墨绿
-$--color-cyan: #2F4056; //藏青
-$--color-blue: #1E9FFF; //蓝色
-$--color-black: #393D49; //雅黑
-$--color-gray: #666; //银灰
+$--color-red: #FF4500 !default; //赤色
+$--color-orange: #FF8C00 !default; //橙色
+$--color-green: #009688 !default; //墨绿
+$--color-cyan: #2F4056 !default; //藏青
+$--color-blue: #1E9FFF !default; //蓝色
+$--color-black: #393D49 !default; //雅黑
+$--color-gray: #666 !default; //银灰
+$--color-white: #FFFFFF !default;
+$--color-success: #36ad6a !default; //成功辅助色
+$--color-warning: #fcb040 !default; //警告辅助色
+$--color-danger: #d03050 !default; //危险辅助色
+$--color-info: #95949A !default;
+$--color-text-placeholder: #C0C4CC !default;
+$text-color: #444 !default;
 
-$--color-success: #36ad6a; //成功辅助色
-$--color-warning: #fcb040; //警告辅助色
-$--color-danger: #d03050; //危险辅助色
-$--color-info: #95949A;
-$--color-text-placeholder: #C0C4CC;
-$text-color: #444;
-
-$border-color: #EFEFF5;
+$border-color: #EFEFF5 !default;
 
 $--sm: 768px !default;
 $--md: 992px !default;
@@ -34,7 +34,7 @@ $state-prefix: 'is-';
 $--background-color-base: #F5F7FA !default;
 $--border-radius-base: 4px !default;
 //Input
-$--input-default-height: 40px;
+$--input-default-height: 40px !default;
 $--input-border-radius: $--border-radius-base;
 
 $--input-medium-font-size: 14px !default;
@@ -43,3 +43,21 @@ $--input-small-font-size: 13px !default;
 $--input-small-height: 32px !default;
 $--input-mini-font-size: 12px !default;
 $--input-mini-height: 28px !default;
+
+
+//Button
+$--button-default-height: 40px !default;
+$--button-border-radius: $--border-radius-base;
+
+
+$--button-medium-font-size: 14px !default;
+$--button-medium-height: 36px !default;
+$--button-small-font-size: 13px !default;
+$--button-small-height: 32px !default;
+$--button-mini-font-size: 12px !default;
+$--button-mini-height: 28px !default;
+
+$--button-primary-line: mix($--color-white, $--color-blue, 20%) !default;
+$--button-success-line: mix($--color-white, $--color-success, 20%) !default;
+$--button-warning-line: mix($--color-white, $--color-warning, 20%) !default;
+$--button-danger-line: mix($--color-white, $--color-danger, 20%) !default;
