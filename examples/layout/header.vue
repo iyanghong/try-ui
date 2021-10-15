@@ -39,6 +39,7 @@ export default {
 @import "src/theme/mixins/mixins";
 
 .main-header {
+	background-color: #fff;
 	@mixin headerFlex {
 		display: flex;
 		flex-wrap: nowrap;
