@@ -1,7 +1,26 @@
 @import "./common/variables.scss";
 @import "./mixins/mixins.scss";
 
-.t-button {
+
+@mixin button-type($type,$backgroundColor,$hoverBackgroundColor) {
+	&.t-button--#{$type} {
+		background-color: $backgroundColor;
+		color: #ffffff;
+
+		&:not(.is-disabled):hover {
+			background-color: $hoverBackgroundColor;
+		}
+	}
+}
+@mixin button-size($size,$font-size,$button-height) {
+	&.t-button--#{$size} {
+		height: $button-height;
+		line-height: $button-height;
+		font-size: $font-size;
+	}
+}
+
+@include name-block(button) {
 	margin: 0;
 	height: $--button-default-height;
 	line-height: $--button-default-height;
@@ -29,28 +48,11 @@
 		}
 	}
 
-	@mixin button-type($type,$backgroundColor,$hoverBackgroundColor) {
-		&.t-button--#{$type} {
-			background-color: $backgroundColor;
-			color: #ffffff;
 
-			&:not(.is-disabled):hover {
-				background-color: $hoverBackgroundColor;
-			}
-		}
-	}
 	@include button-type(primary, $--color-blue, $--button-primary-line);
 	@include button-type(success, $--color-success, $--button-success-line);
 	@include button-type(warning, $--color-warning, $--button-warning-line);
 	@include button-type(danger, $--color-danger, $--button-danger-line);
-
-	@mixin button-size($size,$font-size,$button-height) {
-		&.t-button--#{$size} {
-			height: $button-height;
-			line-height: $button-height;
-			font-size: $font-size;
-		}
-	}
 
 	@include button-size(medium, $--button-medium-font-size, $--button-medium-height);
 	@include button-size(small, $--button-small-font-size, $--button-small-height);
@@ -71,10 +73,9 @@
 			border-color: #EBEEF5;
 		}
 	}
-
 }
 
-.t-button-group {
+@include name-block(button-group){
 	display: inline-block;
 	vertical-align: middle;
 
@@ -91,12 +92,13 @@
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}
+
 		&:not(:first-child):not(:last-child) {
 			border-radius: 0;
 		}
+
 		&:not(:last-child) {
 			margin-right: -2px;
 		}
 	}
 }
-

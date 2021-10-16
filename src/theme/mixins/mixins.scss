@@ -38,3 +38,24 @@
 		}
 	}
 }
+
+@mixin name-block($block) {
+	$block-name: $namespace + '-' + $block !global;
+	.#{$block-name} {
+		@content;
+	}
+}
+
+@mixin name-element($elements) {
+	$element-name: $elements;
+	$selector: &;
+	$currentSelector: "";
+	@each $unit in $elements {
+		$currentSelector: #{$currentSelector + "." + $block-name + $separator-second + $unit + ","};
+	}
+	@at-root {
+		#{$currentSelector} {
+			@content;
+		}
+	}
+}

@@ -29,7 +29,11 @@ $breakpoints: (
 	'xl' : (min-width: $--xl)
 );
 
+$namespace: 't';
+$separator-top: '-';
+$separator-second: '--';
 $state-prefix: 'is-';
+
 
 $--background-color-base: #F5F7FA !default;
 $--border-radius-base: 4px !default;
