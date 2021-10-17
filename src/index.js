@@ -2,6 +2,7 @@ import Input from './components/input'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
 import TTooltip from './components/tooltip';
+
 const components = [
 	Input,
 	Button,
@@ -19,5 +20,7 @@ export default {
 	version: '0.0.1',
 	install,
 	Input,
-	Button
+	Button,
+	ButtonGroup,
+	TTooltip
 }
