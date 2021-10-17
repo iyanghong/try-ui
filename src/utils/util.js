@@ -112,3 +112,16 @@ export const EventListener = {
 		}
 	}
 };
+
+/**
+ * 首字母大写
+ * @param str
+ * @returns {string|*}
+ */
+export const firstToUpperCase = function (str) {
+	if (str) {
+		str = str.toString();
+		return str.charAt(0).toUpperCase() + str.slice(1)
+	}
+	return str;
+}
