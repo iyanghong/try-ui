@@ -73,7 +73,7 @@ export default {
 
 	.nav-group-name {
 		font-size: 12px;
-		color: #999;
+		color: #9EA4aa;
 		line-height: 26px;
 		margin-top: 15px;
 		padding-left: 8px;
@@ -94,7 +94,7 @@ export default {
 
 	.nav-title-describe {
 		font-size: .8em;
-		color: rgb(158, 164, 170);
+		color: #9EA4aa;
 	}
 }
 </style>
