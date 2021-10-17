@@ -2,12 +2,16 @@ import Input from './components/input'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
 import TTooltip from './components/tooltip';
+import TCol from './components/col'
+import TRow from './components/row';
 
 const components = [
 	Input,
 	Button,
 	ButtonGroup,
-	TTooltip
+	TTooltip,
+	TRow,
+	TCol
 ];
 
 const install = (Vue) => {
@@ -22,5 +26,7 @@ export default {
 	Input,
 	Button,
 	ButtonGroup,
-	TTooltip
+	TTooltip,
+	TRow,
+	TCol
 }

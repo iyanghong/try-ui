@@ -1,6 +1,10 @@
 {
 	"zh-CN": [
 		{
+			"path": "/layout",
+			"title": "栅格布局(Flex)"
+		},
+		{
 			"path": "/color",
 			"title": "颜色",
 			"component": "color"
@@ -18,17 +22,16 @@
 					"title": "输入框"
 				},
 				{
-					"path" : "/button",
-					"title" : "按钮"
+					"path": "/button",
+					"title": "按钮"
 				},
-
 				{
 					"path": "/radio",
 					"title": "单选框"
 				},
 				{
-					"path" : "/tooltip",
-					"title" : "Tooltip提示"
+					"path": "/tooltip",
+					"title": "Tooltip提示"
 				}
 			]
 		}
