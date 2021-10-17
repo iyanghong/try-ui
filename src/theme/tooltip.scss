@@ -1,0 +1,118 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+.t-tooltip {
+	//position: relative;
+
+	&:focus:not(.focusing), &:focus:hover {
+		outline-width: 0;
+	}
+
+	&.t-tooltip--popper {
+		position: absolute;
+		border-radius: 4px;
+		padding: 10px;
+		z-index: 999;
+		font-size: 12px;
+		line-height: 1.2;
+		min-width: 10px;
+		word-wrap: break-word;
+		visibility: hidden;
+		background-color: $--tooltip-color;
+		color: $--color-white;
+
+		&.t-tooltip--visible {
+			visibility: visible;
+		}
+
+		.t-tooltip--arrow {
+			border-width: $--tooltip-arrow-size;
+
+			&,
+			&::after {
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 0;
+				border-color: transparent;
+				border-style: solid;
+			}
+
+			&::after {
+				content: " ";
+				border-width: 5px;
+			}
+		}
+
+
+		&[placement^="top"] {
+			//margin-bottom: #{$--tooltip-arrow-size + 6px};
+
+			.t-tooltip--arrow {
+				bottom: -$--tooltip-arrow-size;
+				border-top-color: $--tooltip-color;
+				border-bottom-width: 0;
+
+				&::after {
+					bottom: 1px;
+					margin-left: -5px;
+					border-top-color: $--tooltip-color;
+					border-bottom-width: 0;
+				}
+			}
+		}
+		&[placement^="bottom"] {
+			//margin-top: #{$--tooltip-arrow-size + 6px};
+
+			.t-tooltip--arrow {
+				top: -$--tooltip-arrow-size;
+				border-top-width: 0;
+				border-bottom-color: $--tooltip-color;
+
+				&::after {
+					top: 1px;
+					margin-left: -5px;
+					border-top-width: 0;
+					border-bottom-color: $--tooltip-color;
+				}
+			}
+		}
+
+		&[placement^="right"] {
+			//margin-left: #{$--tooltip-arrow-size + 6px};
+
+			.t-tooltip--arrow {
+				left: -$--tooltip-arrow-size;
+				border-right-color: $--tooltip-color;
+				border-left-width: 0;
+
+				&::after {
+					bottom: -5px;
+					left: 1px;
+					border-right-color: $--tooltip-color;
+					border-left-width: 0;
+				}
+			}
+		}
+
+		&[placement^="left"] {
+			//margin-right: #{$--tooltip-arrow-size + 6px};
+
+			.t-tooltip--arrow {
+				right: -$--tooltip-arrow-size;
+				border-left-color: $--tooltip-color;
+				border-right-width: 0;
+
+				&::after {
+					right: 1px;
+					bottom: -5px;
+					margin-left: -5px;
+					border-right-width: 0;
+					border-right-color: $--tooltip-color;
+				}
+			}
+		}
+	}
+
+
+}

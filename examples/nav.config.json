@@ -21,9 +21,14 @@
 					"path" : "/button",
 					"title" : "按钮"
 				},
+
 				{
 					"path": "/radio",
 					"title": "单选框"
+				},
+				{
+					"path" : "/tooltip",
+					"title" : "Tooltip提示"
 				}
 			]
 		}

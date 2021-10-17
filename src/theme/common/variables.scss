@@ -65,3 +65,8 @@ $--button-primary-line: mix($--color-white, $--color-blue, 20%) !default;
 $--button-success-line: mix($--color-white, $--color-success, 20%) !default;
 $--button-warning-line: mix($--color-white, $--color-warning, 20%) !default;
 $--button-danger-line: mix($--color-white, $--color-danger, 20%) !default;
+
+
+//Tooltip
+$--tooltip-arrow-size: 6px !default;
+$--tooltip-color: #303133 !default;
