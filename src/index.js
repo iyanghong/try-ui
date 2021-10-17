@@ -4,6 +4,7 @@ import ButtonGroup from './components/button-group'
 import TTooltip from './components/tooltip';
 import TCol from './components/col'
 import TRow from './components/row';
+import TSpace from './components/space';
 
 const components = [
 	Input,
@@ -11,7 +12,8 @@ const components = [
 	ButtonGroup,
 	TTooltip,
 	TRow,
-	TCol
+	TCol,
+	TSpace
 ];
 
 const install = (Vue) => {
@@ -28,5 +30,6 @@ export default {
 	ButtonGroup,
 	TTooltip,
 	TRow,
-	TCol
+	TCol,
+	TSpace
 }

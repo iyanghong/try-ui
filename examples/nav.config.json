@@ -1,22 +1,33 @@
 {
 	"zh-CN": [
 		{
-			"path": "/layout",
-			"title": "栅格布局(Flex)"
-		},
-		{
-			"path": "/color",
-			"title": "颜色",
-			"component": "color"
+			"groupLabel": "Basic",
+			"groupName": "基础",
+			"children": [
+				{
+					"path": "/layout",
+					"title": "栅格布局",
+					"titleDescribe": "Flex"
+				},
+				{
+					"path": "/color",
+					"title": "颜色",
+					"component": "color"
+				},
+				{
+					"path": "/icons",
+					"title": "图标"
+				},
+				{
+					"path": "/space",
+					"title": "间隔"
+				}
+			]
 		},
 		{
 			"groupLabel": "表单",
 			"groupName": "Form",
 			"children": [
-				{
-					"path": "/icons",
-					"title": "图标"
-				},
 				{
 					"path": "/input",
 					"title": "输入框"
