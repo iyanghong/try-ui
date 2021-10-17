@@ -1,7 +1,7 @@
 <template>
 	<div class="main-header">
 		<div class="header-left">
-			<div class="logo"><span>Try UI</span></div>
+			<div class="logo"><img :src="logo"/><span>Try UI</span></div>
 			<div class="header-nav">
 				<div class="header-nav-item"><a href="">首页</a></div>
 				<div class="header-nav-item"><a :class="{'active':routePath.indexOf('/components') === 0}"
@@ -20,10 +20,14 @@
 </template>
 
 <script>
+import logoImage from '../logo.png'
+
 export default {
 	name: "MainHeader",
 	data() {
-		return {}
+		return {
+			logo: logoImage
+		}
 	},
 	computed: {
 		routePath() {
@@ -65,7 +69,12 @@ export default {
 		line-height: 60px;
 		width: 200px;
 		padding-left: 30px;
-
+		display: flex;
+		align-items: center;
+		img{
+			height: 40px;
+			margin-right: 20px;
+		}
 	}
 
 	.header-nav {
