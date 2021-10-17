@@ -5,9 +5,8 @@
 				<div class="nav-group" :key="index">
 					<div class="nav-group-name">{{ group.groupLabel || group.groupName }}</div>
 					<div v-for="(nav,navIndex) in group.children" :key="navIndex" class="nav-item">
-						<a :class="{'active':isActive(nav.path)}" :href="'/components' + nav.path">{{
-								nav.title
-							}}</a>
+						<a :class="{'active':isActive(nav.path)}" :href="'/components' + nav.path">
+							{{ nav.title }}<span class="nav-title-describe">{{ getTitleDescribe(nav) }}</span></a>
 					</div>
 				</div>
 			</template>
@@ -15,7 +14,7 @@
 				<div class="nav-item" :key="index">
 					<a :class="{'active':isActive(group.path)}" :href="'/components' + group.path">{{
 							group.title
-						}}</a>
+						}} <span class="nav-title-describe">{{ getTitleDescribe(group) }}</span> </a>
 				</div>
 			</template>
 		</template>
@@ -23,6 +22,8 @@
 </template>
 
 <script>
+import {firstToUpperCase} from "../../src/utils/util";
+
 export default {
 	name: "side-nav",
 	props: {
@@ -45,6 +46,15 @@ export default {
 				return path === this.routePath.slice(lastIndex);
 			}
 			return path === this.routePath;
+		},
+		getTitleDescribe(nav) {
+			let describe = '';
+			if (nav.titleDescribe) {
+				describe = nav.titleDescribe;
+			} else {
+				describe = firstToUpperCase(nav.path.slice(1));
+			}
+			return ` (${describe})`;
 		}
 	}
 }
@@ -73,9 +83,18 @@ export default {
 		a {
 			@include aActive;
 			padding-left: 15px;
+			&.active .nav-title-describe,
+			&:hover .nav-title-describe{
+				color: #1E9FFF;
+			}
 		}
 
 
+	}
+
+	.nav-title-describe {
+		font-size: .8em;
+		color: rgb(158, 164, 170);
 	}
 }
 </style>
