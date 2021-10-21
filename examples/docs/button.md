@@ -75,7 +75,6 @@
 ### 按钮组
 
 :::demo 使用`<t-button-group>`标签来嵌套你的按钮。
-
 ```html
 
 <t-button-group>
@@ -84,7 +83,6 @@
     <t-button type="primary" icon="t-icon-copy">复制</t-button>
 </t-button-group>
 ```
-
 :::
 
 ### Api
