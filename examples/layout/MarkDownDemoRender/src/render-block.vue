@@ -13,19 +13,21 @@
 			<div class="demo-block-description" v-if="$slots.default">
 				<slot></slot>
 			</div>
-			<slot name="highlight"></slot>
+			<div class="highlight" v-highlight>
+				<slot name="highlight"></slot>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import 'highlight.js/styles/color-brewer.css';
 
 export default {
 	name: "render-block",
 	data() {
 		return {
-			showCode: false
+			showCode: false,
+			demoComponent: null
 		}
 	},
 	computed: {
@@ -129,7 +131,8 @@ export default {
 			font-size: 14px;
 		}
 	}
-	.demo-block-control{
+
+	.demo-block-control {
 		border-top: solid 1px #eaeefb;
 		height: 44px;
 		box-sizing: border-box;
@@ -147,6 +150,7 @@ export default {
 		background-color: #f7f7f7;
 		font-size: 0;
 		overflow: auto;
+
 		.demo-block-description {
 			padding: 12px;
 			box-sizing: border-box;
@@ -176,6 +180,7 @@ export default {
 				line-height: 18px;
 			}
 		}
+
 		code {
 			background-color: #f7f7f7;
 			font-family: Consolas, Menlo, Courier, monospace;

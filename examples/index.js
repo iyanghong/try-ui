@@ -7,6 +7,7 @@ import SideNav from './layout/side-nav'
 import MainHeader from './layout/header';
 import Search from './layout/search'
 import icons from './icons.json';
+import highlight from './directive/highlight'
 import '../src/theme/index.scss';
 import './styles/index.scss';
 import 'github-markdown-css/github-markdown.css'
@@ -18,6 +19,8 @@ Vue.component('main-header', MainHeader)
 Vue.component('Search', Search)
 Vue.use(TryUi);
 Vue.prototype.$icons = icons;
+
+Vue.directive('highlight', highlight);
 
 new Vue({
 	router,

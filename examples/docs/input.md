@@ -11,7 +11,7 @@
 ```html
 
 <template>
-	<t-input placeholder="输入"></t-input>
+    <t-input placeholder="输入"></t-input>
 </template>
 ```
 
@@ -24,9 +24,9 @@
 ```html
 
 <template>
-	<t-input status="success" placeholder="success状态"></t-input>
-	<t-input status="warning" placeholder="warning状态"></t-input>
-	<t-input status="danger" placeholder="danger状态"></t-input>
+    <t-input status="success" placeholder="success状态"></t-input>
+    <t-input status="warning" placeholder="warning状态"></t-input>
+    <t-input status="danger" placeholder="danger状态"></t-input>
 </template>
 ```
 
@@ -39,7 +39,7 @@
 ```html
 
 <template>
-	<t-input disabled placeholder="禁用"></t-input>
+    <t-input disabled placeholder="禁用"></t-input>
 </template>
 ```
 
@@ -63,10 +63,10 @@
 ```html
 
 <t-input>
-	<template slot="prepend">Http://</template>
+    <template slot="prepend">Http://</template>
 </t-input>
 <t-input>
-	<template slot="append">.com</template>
+    <template slot="append">.com</template>
 </t-input>
 ```
 
@@ -98,8 +98,8 @@
 |suffix-icon|输入框尾部图标| string| — | —
 |status|输入框边框状态|string|success / warning / danger|-
 
-
 ### Input Slots
+
 | name | 说明 |
 |------|--------|
 | prefix | 输入框头部内容，只对 `type="text"` 有效 |
@@ -108,6 +108,7 @@
 | append | 输入框后置内容，只对 `type="text"` 有效 |
 
 ### Input Events
+
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|
 | blur | 在 Input 失去焦点时触发 | (event: Event) |

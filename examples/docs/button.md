@@ -46,13 +46,18 @@
 :::
 
 ### 图标按钮
+
 :::demo 你可以使用`icon`属性来定义按钮图标
+
 ```html
+
 <t-button icon="t-icon-edit"></t-button>
 <t-button icon="t-icon-save"></t-button>
 <t-button icon="t-icon-share">分享</t-button>
 ```
+
 :::
+
 ### 不同尺寸
 
 :::demo 你可以使用`size`属性来定义按钮的尺寸
@@ -67,14 +72,20 @@
 
 :::
 
-
 ### 按钮组
-:::demo 使用<t-button-group>标签来嵌套你的按钮。
+
+:::demo 使用`<t-button-group>`标签来嵌套你的按钮。
+
 ```html
+
 <t-button-group>
-	<t-button type="primary" icon="t-icon-edit">编辑</t-button>
-	<t-button type="primary" icon="t-icon-save">保存</t-button>
-	<t-button type="primary" icon="t-icon-copy">复制</t-button>
+    <t-button type="primary" icon="t-icon-edit">编辑</t-button>
+    <t-button type="primary" icon="t-icon-save">保存</t-button>
+    <t-button type="primary" icon="t-icon-copy">复制</t-button>
 </t-button-group>
 ```
+
 :::
+
+### Api
+

@@ -5,6 +5,7 @@ import TTooltip from './components/tooltip';
 import TCol from './components/col'
 import TRow from './components/row';
 import TSpace from './components/space';
+import TScrollbar from './components/scrollbar';
 
 const components = [
 	Input,
@@ -13,7 +14,8 @@ const components = [
 	TTooltip,
 	TRow,
 	TCol,
-	TSpace
+	TSpace,
+	TScrollbar
 ];
 
 const install = (Vue) => {
@@ -31,5 +33,6 @@ export default {
 	TTooltip,
 	TRow,
 	TCol,
-	TSpace
+	TSpace,
+	TScrollbar
 }

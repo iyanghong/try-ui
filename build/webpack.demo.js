@@ -8,7 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const isProd = process.env.NODE_ENV === 'production';
-const MarkdownLoader = require('./md-loader')
 
 module.exports = {
 	entry: './examples/index.js',
@@ -16,7 +15,8 @@ module.exports = {
 		hot: true,
 		host: 'localhost',
 		port: '6660',
-		contentBase: './examples/dist',
+		publicPath: '/',
+		// contentBase: './examples/dist',
 		historyApiFallback: true
 	},
 	resolve: {
@@ -78,7 +78,22 @@ module.exports = {
 					name: path.posix.join('static', '[name].[hash:7].[ext]')
 				}
 			},
-			MarkdownLoader
+			{
+				test: /\.md$/,
+				use: [
+					{
+						loader: 'vue-loader',
+						options: {
+							compilerOptions: {
+								preserveWhitespace: false
+							}
+						}
+					},
+					{
+						loader: path.resolve(__dirname, './md-loader/index.js')
+					}
+				]
+			}
 		]
 	},
 	plugins: [
@@ -95,5 +110,5 @@ module.exports = {
 				}
 			}
 		})
-	],
+	]
 }

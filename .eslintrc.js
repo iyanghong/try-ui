@@ -12,6 +12,7 @@ module.exports = {
 		// https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
 		// consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
 		'plugin:vue/essential',
+		'plugin:markdown/recommended',
 		// https://github.com/standard/standard/blob/master/docs/RULES-en.md
 		'standard'
 	],
@@ -65,6 +66,7 @@ module.exports = {
 		'semi': 0, // 行尾不使用分号
 		'quotes': 0, // 字符串必须要单引号
 		'object-curly-spacing': 0,
+		'prefer-promise-reject-errors': 0,
 		'eol-last': 0,   //文件最后需要换行
 		'comma-dangle': ['error'],
 		'eqeqeq': 0, // 不需要强制使用全等

@@ -6,9 +6,13 @@ import navConfig from './nav.config.json';
 import {isArray} from "../src/utils/types";
 
 
-const modulesFiles = require.context('./docs', true, /\.md$/)
-const docKeys = modulesFiles.keys();
-
+/*const modulesFiles = require.context('./docs', true, /\.md$/)
+const docKeys = modulesFiles.keys();*/
+const loadDoc = function (path) {
+	return r => require.ensure([], () =>
+			r(require(`./docs${path}.md`)),
+		'demo');
+}
 const loadComponent = function (component) {
 	return r => require.ensure([], () =>
 			r(require(`./components/${component}.vue`)),
@@ -34,14 +38,16 @@ const registerRoute = function (navConfig) {
 	})
 
 	function addRoute(page, index) {
-		let component; let isMarkdown = true;
+		let component;
+		let isMarkdown = true;
 		if (page.component) {
 			component = loadComponent(page.component);
 			isMarkdown = false;
 		} else {
-			let path = `.${page.path}.md`;
+			/*let path = `.${page.path}.md`;
 			if (docKeys.indexOf(path) === -1) return;
-			component = modulesFiles(path);
+			component = modulesFiles(path);*/
+			component = loadDoc(page.path)
 		}
 		let route = {
 			path: page.path.slice(1),
