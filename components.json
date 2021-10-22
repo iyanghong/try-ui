@@ -1,0 +1,10 @@
+{
+    "input": "./components/input/index.js",
+    "button": "./components/button/index.js",
+    "button-group": "./components/button-group/index.js",
+    "tooltip": "./components/tooltip/index.js",
+    "col": "./components/col/index.js",
+    "row": "./components/row/index.js",
+    "space": "./components/space/index.js",
+    "scrollbar": "./components/scrollbar/index.js"
+}

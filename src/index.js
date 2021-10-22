@@ -1,22 +1,23 @@
-import Input from './components/input'
-import Button from './components/button'
-import ButtonGroup from './components/button-group'
-import TTooltip from './components/tooltip';
-import TCol from './components/col'
-import TRow from './components/row';
-import TSpace from './components/space';
-import TScrollbar from './components/scrollbar';
+import Input from './components/input/index.js';
+import Button from './components/button/index.js';
+import ButtonGroup from './components/button-group/index.js';
+import Tooltip from './components/tooltip/index.js';
+import Col from './components/col/index.js';
+import Row from './components/row/index.js';
+import Space from './components/space/index.js';
+import Scrollbar from './components/scrollbar/index.js';
 
 const components = [
     Input,
     Button,
     ButtonGroup,
-    TTooltip,
-    TRow,
-    TCol,
-    TSpace,
-    TScrollbar
+    Tooltip,
+    Col,
+    Row,
+    Space,
+    Scrollbar
 ];
+
 
 const install = (Vue) => {
     components.forEach(component => {
@@ -24,15 +25,16 @@ const install = (Vue) => {
     });
 }
 
+
 export default {
     version: '0.0.1',
     install,
     Input,
     Button,
     ButtonGroup,
-    TTooltip,
-    TRow,
-    TCol,
-    TSpace,
-    TScrollbar
+    Tooltip,
+    Col,
+    Row,
+    Space,
+    Scrollbar
 }
