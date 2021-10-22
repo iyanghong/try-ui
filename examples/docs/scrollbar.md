@@ -2,14 +2,14 @@
 
 美化滚动条
 
-### 基础用法
+### 基本用法
 
 :::demo
 
 ```html
 
-<t-scrollbar>
-    <div class="demo-item"></div>
+<t-scrollbar style="height: 200px;width: 300px">
+    <div class="demo-item" v-for="n in 10" v-text="n"></div>
 </t-scrollbar>
 <script>
     export default {
@@ -19,5 +19,3 @@
     }
 </script>
 ```
-
-:::

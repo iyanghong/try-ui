@@ -1,9 +1,13 @@
 
 .demo-block.demo-scrollbar {
-	.demo-item {
-		border-radius: 4px;
-		min-height: 36px;
-		background: #d3dce6;
-		margin: 10px 0;
-	}
+    .demo-item {
+        border-radius: 4px;
+        min-height: 36px;
+        background: #d3dce6;
+        margin: 10px 0;
+        text-align: center;
+        line-height: 36px;
+        width: 1000px;
+    }
+
 }

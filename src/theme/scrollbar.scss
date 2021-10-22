@@ -1,0 +1,80 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+.t-scrollbar {
+    overflow: hidden;
+    position: relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+        > .t-scrollbar--bar {
+            opacity: 1;
+            transition: opacity 340ms ease-out;
+        }
+    }
+
+    .t-scrollbar--wrap {
+        overflow: scroll;
+        height: 100%;
+        width: 100%;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    /*@include when(horizontal) {
+        .t-scrollbar--view {
+            width: max-content;
+        }
+    }*/
+    .t-scrollbar--bar {
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        z-index: 1;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 120ms ease-out;
+        @include when(vertical) {
+            width: 6px;
+            top: 2px;
+
+            > div {
+                width: 100%;
+            }
+        }
+
+        @include when(horizontal) {
+            height: 6px;
+            left: 2px;
+
+            > div {
+                height: 100%;
+            }
+        }
+
+        .t-scrollbar--thumb {
+            position: relative;
+            display: block;
+            width: 0;
+            height: 0;
+            cursor: pointer;
+            border-radius: inherit;
+            background-color: $--scrollbar-background-color;
+            transition: .3s background-color;
+
+            &:hover {
+                background-color: $--scrollbar-background-hover-color;
+            }
+        }
+    }
+
+    .t-scrollbar--wrap {
+        overflow: scroll;
+        height: 100%;
+    }
+}

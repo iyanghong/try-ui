@@ -8,31 +8,31 @@ import TSpace from './components/space';
 import TScrollbar from './components/scrollbar';
 
 const components = [
-	Input,
-	Button,
-	ButtonGroup,
-	TTooltip,
-	TRow,
-	TCol,
-	TSpace,
-	TScrollbar
+    Input,
+    Button,
+    ButtonGroup,
+    TTooltip,
+    TRow,
+    TCol,
+    TSpace,
+    TScrollbar
 ];
 
 const install = (Vue) => {
-	components.forEach(component => {
-		Vue.component(component.name, component);
-	});
+    components.forEach(component => {
+        Vue.component(component.name, component);
+    });
 }
 
 export default {
-	version: '0.0.1',
-	install,
-	Input,
-	Button,
-	ButtonGroup,
-	TTooltip,
-	TRow,
-	TCol,
-	TSpace,
-	TScrollbar
+    version: '0.0.1',
+    install,
+    Input,
+    Button,
+    ButtonGroup,
+    TTooltip,
+    TRow,
+    TCol,
+    TSpace,
+    TScrollbar
 }
