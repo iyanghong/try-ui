@@ -4,7 +4,9 @@
     "description": "一个网站快速构建UI库",
     "main": "src/index.js",
     "scripts": {
-        "dev": "npm run build:entry && npm run build:theme-entry && npm run build:example-styles && webpack-dev-server --inline --config ./build/webpack.demo.js",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --mode development --config ./build/webpack.demo.js",
+        "deploy:example": "cross-env NODE_ENV=production PUBLIC_PATH=/try-ui/ webpack --mode production --config ./build/webpack.demo.js",
+        "build:all-entry": "npm run build:entry && npm run build:theme-entry && npm run build:example-styles",
         "build:entry": "node ./build/build-entry.js",
         "build:theme-entry": "node ./build/build-theme-entry.js",
         "build:example-styles": "node ./build/build-example-styles.js",
@@ -24,6 +26,7 @@
         "@vue/component-compiler-utils": "^2.6.0",
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.2.2",
+        "copy-webpack-plugin": "^9.0.1",
         "css-loader": "^3.6.0",
         "eslint": "^7.32.0",
         "eslint-config-standard": "^16.0.3",

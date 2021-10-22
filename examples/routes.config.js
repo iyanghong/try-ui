@@ -66,7 +66,7 @@ const registerRoute = function (navConfig) {
 }
 
 let routes = registerRoute(navConfig);
-let defaultPath = '/components/input';
+let defaultPath = `${process.env.PUBLIC_PATH || '/'}components/input`;
 
 export default [
 	{

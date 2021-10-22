@@ -5,20 +5,27 @@ const path = require('path');
 const webpack = require('webpack');
 const config = require('./config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const WebpackBar = require('webpackbar');
 const isProd = process.env.NODE_ENV === 'production';
-
-module.exports = {
+let historyApiFallback = true;
+if (isProd) {
+    historyApiFallback = {
+        rewrites: [{
+            from: /\//,
+            to: '/404.html'
+        }]
+    }
+}
+let webpackConfig = {
     entry: './examples/index.js',
     devServer: {
         hot: true,
         host: 'localhost',
         port: '6660',
-        publicPath: '/',
+        publicPath: process.env.PUBLIC_PATH || '/',
         // contentBase: './examples/dist',
-        historyApiFallback: true
+        historyApiFallback
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -28,7 +35,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(process.cwd(), './examples/dist/'),
-        publicPath: process.env.CI_ENV || '/',
+        publicPath: process.env.PUBLIC_PATH || '/',
         filename: '[name].[hash:7].js',
         chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
     },
@@ -58,7 +65,7 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: [
-                    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+                    'style-loader',
                     'css-loader',
                     'sass-loader',
                     {
@@ -111,6 +118,11 @@ module.exports = {
                     preserveWhitespace: false
                 }
             }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': isProd ? config.env.production : config.env.development
         })
     ]
 }
+
+module.exports = webpackConfig;
