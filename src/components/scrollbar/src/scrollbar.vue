@@ -1,7 +1,6 @@
 <template>
     <div :class="[
-        't-scrollbar',
-        vertical ? 'is-vertical':'is-horizontal'
+        't-scrollbar'
     ]">
         <div class="t-scrollbar--wrap" ref="wrap" @scroll="handleScroll">
             <div class="t-scrollbar--view">
@@ -18,12 +17,6 @@ import Bar from './bar.vue';
 
 export default {
     name: "TScrollbar",
-    props: {
-        vertical: {
-            type: Boolean,
-            default: true
-        }
-    },
     components: {
         Bar
     },

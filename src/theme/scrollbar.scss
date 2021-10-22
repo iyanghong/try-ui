@@ -26,11 +26,6 @@
         }
     }
 
-    /*@include when(horizontal) {
-        .t-scrollbar--view {
-            width: max-content;
-        }
-    }*/
     .t-scrollbar--bar {
         position: absolute;
         right: 2px;
