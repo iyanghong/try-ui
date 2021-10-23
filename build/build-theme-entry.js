@@ -12,6 +12,8 @@ for (let name in components) {
         }))
     }
 }
-
+componentStyle.push(render(STYLE_TEMPLATE, {
+    name: 'icons'
+}))
 fs.writeFileSync(OUTPUT_PATH, componentStyle.join('\n'));
 console.log('[build theme entry] DONE:', OUTPUT_PATH);
