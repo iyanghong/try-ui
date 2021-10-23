@@ -6,5 +6,6 @@
     "col": "./components/col/index.js",
     "row": "./components/row/index.js",
     "space": "./components/space/index.js",
-    "scrollbar": "./components/scrollbar/index.js"
+    "scrollbar": "./components/scrollbar/index.js",
+    "select": "./components/select/index.js"
 }

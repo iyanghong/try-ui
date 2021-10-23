@@ -13,11 +13,11 @@
 	text-overflow: ellipsis;
 	font-weight: 400;
 	&.active {
-		color: #1E9FFF;
+		color: $--color-brand;
 	}
 
 	&:hover {
-		color: #1E9FFF;
+		color: $--color-brand;
 	}
 }
 

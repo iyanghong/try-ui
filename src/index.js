@@ -6,6 +6,7 @@ import Col from './components/col/index.js';
 import Row from './components/row/index.js';
 import Space from './components/space/index.js';
 import Scrollbar from './components/scrollbar/index.js';
+import Select from './components/select/index.js';
 
 const components = [
     Input,
@@ -15,7 +16,8 @@ const components = [
     Col,
     Row,
     Space,
-    Scrollbar
+    Scrollbar,
+    Select
 ];
 
 
@@ -36,5 +38,6 @@ export default {
     Col,
     Row,
     Space,
-    Scrollbar
+    Scrollbar,
+    Select
 }

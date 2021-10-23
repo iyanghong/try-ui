@@ -8,17 +8,17 @@
 	padding: 0 12px;
 	white-space: nowrap;
 	cursor: pointer;
-	background: #fff;
-	border: 1px solid #dcdfe6;
+	background: $--color-white;
+	border: $--border-size $--border-style $--button-default-border-color;
 	color: #606266;
 	-webkit-appearance: none;
 	text-align: center;
 	box-sizing: border-box;
 	font-size: 14px;
-	border-radius: 4px;
+	border-radius: $--button-border-radius;
 
 	&:not(.is-disabled):hover {
-		background-color: #ecf5ff;
+		background-color: $--button-default-background-color;
 		box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
 	}
 
@@ -57,7 +57,7 @@
 	@include button-size(mini, $--button-mini-font-size, $--button-mini-height);
 
 	@include when(round) {
-		border-radius: 20px;
+		border-radius: $--button-border-round-radius;
 		padding: 0 20px;
 	}
 
@@ -68,7 +68,7 @@
 			opacity: 0.6;
 			cursor: not-allowed;
 			background-image: none;
-			border-color: #EBEEF5;
+			border-color: $--border-color;
 		}
 	}
 

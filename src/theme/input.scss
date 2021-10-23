@@ -16,7 +16,7 @@
 	line-height: $--input-default-height;
 
 	&:hover, &:focus {
-		border-color: #79a1eb;
+		border-color: $--input-hover-color;
 	}
 
 	&::-webkit-input-placeholder {
@@ -43,7 +43,7 @@
 .t-input--disabled .t-input--inner {
 	color: #b1b1b1;
 	background-color: #f7f7f7;
-	border-color: #ececec;
+	border-color: $--border-color;
 	cursor: not-allowed;
 }
 
