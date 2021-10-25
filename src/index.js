@@ -8,6 +8,7 @@ import Space from './components/space/index.js';
 import Scrollbar from './components/scrollbar/index.js';
 import Select from './components/select/index.js';
 import Tag from './components/tag/index.js';
+import Alert from './components/alert/index.js';
 
 const components = [
     Input,
@@ -19,7 +20,8 @@ const components = [
     Space,
     Scrollbar,
     Select,
-    Tag
+    Tag,
+    Alert
 ];
 
 
@@ -42,5 +44,6 @@ export default {
     Space,
     Scrollbar,
     Select,
-    Tag
+    Tag,
+    Alert
 }

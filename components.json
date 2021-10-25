@@ -8,5 +8,6 @@
     "space": "./components/space/index.js",
     "scrollbar": "./components/scrollbar/index.js",
     "select": "./components/select/index.js",
-    "tag": "./components/tag/index.js"
+    "tag": "./components/tag/index.js",
+    "alert": "./components/alert/index.js"
 }
