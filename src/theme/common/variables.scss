@@ -8,6 +8,7 @@ $--color-blue: #1E9FFF !default; //蓝色
 $--color-black: #393D49 !default; //雅黑
 $--color-gray: #666 !default; //银灰
 $--color-white: #FFFFFF !default;
+$--color-primary: $--color-blue !default;
 $--color-success: #36ad6a !default; //成功辅助色
 $--color-warning: #fcb040 !default; //警告辅助色
 $--color-danger: #ea5455 !default; //危险辅助色
@@ -95,3 +96,19 @@ $--tooltip-color: #303133 !default;
 //Scrollbar
 $--scrollbar-background-color: rgba($--color-gray, .3) !default;
 $--scrollbar-background-hover-color: rgba($--color-gray, .5) !default;
+
+
+// Tag
+$--tag-default-height: 32px !default;
+$--tag-padding: 0 10px !default;
+$--tag-font-size: 12px !default;
+$--tag-border-radius: 4px !default;
+$--tag-info-color: $--color-info !default;
+$--tag-primary-color: $--color-primary !default;
+$--tag-success-color: $--color-success !default;
+$--tag-warning-color: $--color-warning !default;
+$--tag-danger-color: $--color-danger !default;
+$--tag-medium-height: 28px !default;
+$--tag-small-height: 24px !default;
+$--tag-mini-height: 20px !default;
+

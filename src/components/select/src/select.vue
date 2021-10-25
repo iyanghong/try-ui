@@ -1,7 +1,10 @@
 <template>
     <div class="t-select" :class="size ? 't-select--' + size : ''" @click.stop="handleClick"
          v-click-out-side="handleClose">
-        <span class="t-select--value" v-text="value"></span>
+        <template v-if="multiple">
+
+        </template>
+        <span class="t-select--value" v-else v-text="value"></span>
         <input
             type="hidden"
             ref="selectValue"
@@ -42,7 +45,12 @@ export default {
         value: {
             required: true
         },
-        items: Array
+        items: Array,
+        multiple: Boolean,
+        multipleNumber: {
+            type: Number,
+            default: 0
+        }
     },
     components: {
         TOption,
@@ -55,7 +63,8 @@ export default {
     data() {
         return {
             isDropdown: false,
-            inputWidth: 0
+            inputWidth: 0,
+            multipleArray: []
         }
     },
     created() {

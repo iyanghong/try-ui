@@ -1,0 +1,106 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+@mixin tag-type($type,$tagColor,$backgroundColorWeight,$borderColorWeight,$fontColorWeight,$hoverColorWeight) {
+    &.t-tag--#{$type} {
+        background-color: mix($tagColor, $--color-white, $backgroundColorWeight);
+        border-color: mix($tagColor, $--color-white, $borderColorWeight);
+        color: mix($tagColor, $--color-white, $fontColorWeight);
+
+        .t-tag--close {
+            color: mix($tagColor, $--color-white, $fontColorWeight);
+
+            &:hover {
+                color: $--color-white;
+                background-color: mix($tagColor, $--color-white, $hoverColorWeight);
+            }
+        }
+    }
+}
+
+@mixin tag-theme($backgroundColorWeight,$borderColorWeight,$fontColorWeight,$hoverColorWeight) {
+    background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
+    border-color: mix($--tag-primary-color, $--color-white, $borderColorWeight);
+    color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
+
+    .t-tag--close {
+        color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
+
+        &:hover {
+            color: $--color-white;
+            background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
+        }
+    }
+
+    @include tag-type(success, $--tag-success-color, $backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight);
+    @include tag-type(warning, $--tag-warning-color, $backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight);
+    @include tag-type(danger, $--tag-danger-color, $backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight);
+    @include tag-type(info, $--tag-info-color, $backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight);
+
+}
+
+.t-tag {
+    @include tag-theme(100%, 100%, 0, 80%);
+
+    display: inline-block;
+    height: $--tag-default-height;
+    line-height: $--tag-default-height;
+    padding: $--tag-padding;
+    font-size: $--tag-font-size;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $--tag-border-radius;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    &.t-tag--light {
+        @include tag-theme(10%, 20%, 100%, 100%);
+    }
+
+    .t-tag--close {
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        font-size: 12px;
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+        top: -1px;
+        right: -5px;
+
+        &::before {
+            display: block;
+        }
+    }
+
+    &.t-tag--medium {
+        height: $--tag-medium-height;
+        line-height: $--tag-medium-height;
+
+        .t-tag--close {
+            transform: scale(0.8);
+        }
+    }
+
+    &.t-tag--small {
+        height: $--tag-small-height;
+        line-height: $--tag-small-height;
+
+        .t-tag--close {
+            transform: scale(0.7);
+        }
+    }
+
+    &.t-tag--mini {
+        height: $--tag-mini-height;
+        line-height: $--tag-mini-height;
+
+        .t-tag--close {
+            transform: scale(0.6);
+        }
+    }
+}
+
+
