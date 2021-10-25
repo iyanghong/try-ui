@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import Dispatch from '../../../mixins/dispatch.js'
+
 export default {
     name: "TOption",
     props: {
@@ -13,6 +15,7 @@ export default {
         },
         label: [String, Number]
     },
+    mixins: [Dispatch],
     data() {
         return {}
     },
@@ -20,7 +23,7 @@ export default {
     },
     methods: {
         handleClick() {
-
+            this.dispatch('TSelect', 'handleSetSelect', this.value);
         }
     }
 }

@@ -1,18 +1,21 @@
 export default {
     methods: {
         dispatch(componentName, eventName, params) {
-            let parent = this.$parent || this.$root;
-            let name = parent.$options.componentName;
+            let parent = this.$parent;
+
+            let name = parent.$options.name;
 
             while (parent && (!name || name !== componentName)) {
                 parent = parent.$parent;
-
                 if (parent) {
-                    name = parent.$options.componentName;
+                    name = parent.$options.name;
                 }
             }
             if (parent) {
-                parent.$emit.apply(parent, [eventName].concat(params));
+                if (typeof parent[eventName] === 'function') {
+                    // eslint-disable-next-line no-useless-call
+                    parent[eventName].call(parent, params)
+                }
             }
         }
     }
