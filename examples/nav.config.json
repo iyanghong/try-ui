@@ -1,54 +1,72 @@
 {
-	"zh-CN": [
-		{
-			"groupLabel": "Basic",
-			"groupName": "基础",
-			"children": [
-				{
-					"path": "/layout",
-					"title": "栅格布局",
-					"titleDescribe": "Flex"
-				},
-				{
-					"path": "/color",
-					"title": "颜色",
-					"component": "color"
-				},
-				{
-					"path": "/icons",
-					"title": "图标"
-				},
-				{
-					"path": "/space",
-					"title": "间隔"
-				},
-				{
-					"path": "/scrollbar",
-					"title": "滚动"
-				}
-			]
-		},
-		{
-			"groupLabel": "表单",
-			"groupName": "Form",
-			"children": [
-				{
-					"path": "/input",
-					"title": "输入框"
-				},
-				{
-					"path": "/button",
-					"title": "按钮"
-				},
-				{
-					"path": "/radio",
-					"title": "单选框"
-				},
-				{
-					"path": "/tooltip",
-					"title": "Tooltip提示"
-				}
-			]
-		}
-	]
+    "zh-CN": [
+        {
+            "groupLabel": "Basic",
+            "groupName": "基础",
+            "children": [
+                {
+                    "path": "/layout",
+                    "title": "栅格布局",
+                    "titleDescribe": "Flex"
+                },
+                {
+                    "path": "/color",
+                    "title": "颜色",
+                    "component": "color"
+                },
+                {
+                    "path": "/icons",
+                    "title": "图标"
+                },
+                {
+                    "path": "/space",
+                    "title": "间隔"
+                },
+                {
+                    "path": "/scrollbar",
+                    "title": "滚动"
+                }
+            ]
+        },
+        {
+            "groupLabel": "表单",
+            "groupName": "Form",
+            "children": [
+                {
+                    "path": "/tag",
+                    "title": "标签"
+                },
+                {
+                    "path": "/input",
+                    "title": "输入框"
+                },
+                {
+                    "path": "/button",
+                    "title": "按钮"
+                },
+                {
+                    "path": "/select",
+                    "title": "选择器"
+                },
+                {
+                    "path": "/radio",
+                    "title": "单选框"
+                },
+                {
+                    "path": "/tooltip",
+                    "title": "Tooltip提示"
+                }
+            ]
+        },
+        {
+            "groupLabel": "反馈组件",
+            "groupName": "Notice",
+            "children": [
+                {
+                    "path": "/alert",
+                    "title": "警告"
+                }
+            ]
+        }
+    ]
 }

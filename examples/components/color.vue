@@ -1,119 +1,159 @@
 <template>
-	<div class="demo-color">
-		<h3>主要色调</h3>
-		<ul class="demo-color-list">
-			<li class="brand-color"><span>Brand Color</span>#1E9FFF</li>
-		</ul>
+    <div class="demo-color">
+        <h3>主要色调</h3>
+        <ul class="demo-color-list">
+            <li class="brand-color"><span>Brand Color</span></li>
+        </ul>
 
-		<h3>辅助色</h3>
-		<ul class="demo-color-list">
-			<li class="success-color"><span>Success Color</span>#36ad6a</li>
-			<li class="warning-color"><span>Warning Color</span>#fcb040</li>
-			<li class="danger-color"><span>Danger Color</span>#d03050</li>
-			<li class="info-color"><span>Info Color</span>#95949A</li>
-		</ul>
+        <h3>辅助色</h3>
+        <ul class="demo-color-list">
+            <li class="success-color"><span>Success Color</span></li>
+            <li class="warning-color"><span>Warning Color</span></li>
+            <li class="danger-color"><span>Danger Color</span></li>
+            <li class="info-color"><span>Info Color</span></li>
+        </ul>
 
-		<h3>七种色</h3>
-		<ul class="demo-color-list">
-			<li class="red-color"><span>赤色</span>#FF4500</li>
-			<li class="orange-color"><span>橙色</span>#FF8C00</li>
-			<li class="green-color"><span>墨绿</span>#009688</li>
-			<li class="cyan-color"><span>藏青</span>#2F4056</li>
-			<li class="blue-color"><span>蓝色</span>#1E9FFF</li>
-			<li class="black-color"><span>雅黑</span>#393D49</li>
-			<li class="gray-color"><span>银灰</span>#666</li>
-		</ul>
-	</div>
+        <h3>七种色</h3>
+        <ul class="demo-color-list">
+            <li class="red-color"><span>赤色</span></li>
+            <li class="orange-color"><span>橙色</span></li>
+            <li class="green-color"><span>墨绿</span></li>
+            <li class="cyan-color"><span>藏青</span></li>
+            <li class="blue-color"><span>蓝色</span></li>
+            <li class="black-color"><span>雅黑</span></li>
+            <li class="gray-color"><span>银灰</span></li>
+        </ul>
+    </div>
 </template>
 
 <script>
 export default {
-	name: "color",
-	data() {
-		return {}
-	},
-	created() {
-	}
+    name: "color",
+    data() {
+        return {}
+    },
+    created() {
+    }
 }
 </script>
 
 <style lang="scss">
-.demo-color {
-	color: $text-color;
+@import "src/theme/common/variables.scss";
 
-	h3 {
-		margin: 55px 0 20px;
-	}
+.demo-color {
+    color: $text-color;
+
+    h3 {
+        margin: 55px 0 20px;
+    }
 }
 
 .demo-color-list {
-	display: flex;
-	list-style: none;
-	flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
 
-	li {
-		width: 150px;
-		height: 80px;
-		border: 1px solid $border-color;
-		color: #fff;
-		text-align: center;
-		border-radius: 5px;
-		line-height: 1.6;
-		font-size: 14px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		margin-right: 12px;
-		margin-top: 12px;
-	}
+    li {
+        width: 150px;
+        height: 80px;
+        border: 1px solid $--border-color;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 1.6;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 12px;
+        margin-top: 12px;
+    }
 
-	.brand-color {
-		background-color: $--color-blue;
-	}
+    .brand-color {
+        background-color: $--color-brand;
 
-	.success-color {
-		background-color: $--color-success;
-	}
+        &:after {
+            content: '#{$--color-brand}';
+        }
+    }
 
-	.warning-color {
-		background-color: $--color-warning;
-	}
 
-	.danger-color {
-		background-color: $--color-danger;
-	}
+    .success-color {
+        background-color: $--color-success;
+        &:after {
+            content: '#{$--color-success}';
+        }
+    }
 
-	.info-color {
-		background-color: $--color-info;
-	}
+    .warning-color {
+        background-color: $--color-warning;
+        &:after {
+            content: '#{$--color-warning}';
+        }
+    }
 
-	.red-color {
-		background-color: $--color-red;
-	}
+    .danger-color {
+        background-color: $--color-danger;
+        &:after {
+            content: '#{$--color-danger}';
+        }
+    }
 
-	.orange-color {
-		background-color: $--color-orange;
-	}
+    .info-color {
+        background-color: $--color-info;
+        &:after {
+            content: '#{$--color-info}';
+        }
+    }
 
-	.green-color {
-		background-color: $--color-green;
-	}
+    .red-color {
+        background-color: $--color-red;
+        &:after {
+            content: '#{$--color-red}';
+        }
+    }
 
-	.cyan-color {
-		background-color: $--color-cyan;
-	}
+    .orange-color {
+        background-color: $--color-orange;
+        &:after {
+            content: '#{$--color-orange}';
+        }
+    }
 
-	.blue-color {
-		background-color: $--color-blue;
-	}
+    .green-color {
+        background-color: $--color-green;
+        &:after {
+            content: '#{$--color-green}';
+        }
+    }
 
-	.black-color {
-		background-color: $--color-black;
-	}
+    .cyan-color {
+        background-color: $--color-cyan;
+        &:after {
+            content: '#{$--color-cyan}';
+        }
+    }
 
-	.gray-color {
-		background-color: $--color-gray;
-	}
+    .blue-color {
+        background-color: $--color-blue;
+        &:after {
+            content: '#{$--color-blue}';
+        }
+    }
+
+    .black-color {
+        background-color: $--color-black;
+        &:after {
+            content: '#{$--color-black}';
+        }
+    }
+
+    .gray-color {
+        background-color: $--color-gray;
+        &:after {
+            content: '#{$--color-gray}';
+        }
+    }
 }
 </style>

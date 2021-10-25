@@ -1,5 +1,5 @@
 .idea
 node_modules
 packages
-examples/dist/*
+examples/dist/
 

@@ -75,6 +75,7 @@
 ### 按钮组
 
 :::demo 使用`<t-button-group>`标签来嵌套你的按钮。
+
 ```html
 
 <t-button-group>
@@ -83,7 +84,17 @@
     <t-button type="primary" icon="t-icon-copy">复制</t-button>
 </t-button-group>
 ```
+
 :::
 
 ### Api
 
+### Button Attributes
+
+| 参数|说明|类型|可选值|默认值|
+|---|---|---|---|---|
+| size     | 尺寸   | string  |   medium / small / mini            |    —     |
+| type     | 类型   | string    |   primary / success / warning / danger / info / text |     —    |
+| round     | 是否圆角按钮   | boolean    | — | false   |
+| disabled  | 是否禁用状态    | boolean   | —   | false   |
+| icon  | 图标类名 | string   |  —  |  —  |

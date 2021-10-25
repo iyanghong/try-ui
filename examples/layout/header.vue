@@ -55,7 +55,7 @@ export default {
 	left: 0;
 	right: 0;
 	z-index: 1;
-	border-bottom: 1px solid $border-color;
+	border-bottom: 1px solid $--border-color;
 	@include headerFlex;
 	color: $text-color;
 	justify-content: space-between;

@@ -65,6 +65,7 @@ export default {
 
 <style lang="scss">
 @import "src/theme/mixins/mixins";
+@import "src/theme/common/variables";
 
 .side-nav {
     position: fixed;
@@ -72,7 +73,7 @@ export default {
     bottom: 0;
     width: 200px;
     background: #ffffff;
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $--border-color;
 
     .nav-group-name {
         font-size: 12px;
@@ -87,9 +88,10 @@ export default {
             @include aActive;
             padding-left: 15px;
 
+            a.active,
             &.active .nav-title-describe,
             &:hover .nav-title-describe {
-                color: #1E9FFF;
+                color: $--color-brand !important;
             }
         }
 

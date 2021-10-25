@@ -1,506 +1,576 @@
 {
-	"id": "2691957",
-	"name": "try-ui",
-	"font_family": "try-icon",
-	"css_prefix_text": "t-icon-",
-	"description": "",
-	"glyphs": [
-		{
-			"icon_id": "5387377",
-			"name": "标签",
-			"font_class": "label",
-			"unicode": "eabd",
-			"unicode_decimal": 60093
-		},
-		{
-			"icon_id": "5387379",
-			"name": "保存",
-			"font_class": "save",
-			"unicode": "eabe",
-			"unicode_decimal": 60094
-		},
-		{
-			"icon_id": "5387380",
-			"name": "编辑",
-			"font_class": "edit",
-			"unicode": "eabf",
-			"unicode_decimal": 60095
-		},
-		{
-			"icon_id": "5387381",
-			"name": "导出",
-			"font_class": "export",
-			"unicode": "eac0",
-			"unicode_decimal": 60096
-		},
-		{
-			"icon_id": "5387382",
-			"name": "导入",
-			"font_class": "import",
-			"unicode": "eac1",
-			"unicode_decimal": 60097
-		},
-		{
-			"icon_id": "5387384",
-			"name": "复制",
-			"font_class": "copy",
-			"unicode": "eac2",
-			"unicode_decimal": 60098
-		},
-		{
-			"icon_id": "5387388",
-			"name": "解锁",
-			"font_class": "unlock",
-			"unicode": "eac3",
-			"unicode_decimal": 60099
-		},
-		{
-			"icon_id": "5387391",
-			"name": "锁定",
-			"font_class": "suoding",
-			"unicode": "eac4",
-			"unicode_decimal": 60100
-		},
-		{
-			"icon_id": "5387393",
-			"name": "添加附件",
-			"font_class": "paperclip",
-			"unicode": "eac5",
-			"unicode_decimal": 60101
-		},
-		{
-			"icon_id": "5387397",
-			"name": "文件夹",
-			"font_class": "folder",
-			"unicode": "eac6",
-			"unicode_decimal": 60102
-		},
-		{
-			"icon_id": "5387456",
-			"name": "播放",
-			"font_class": "play",
-			"unicode": "ead8",
-			"unicode_decimal": 60120
-		},
-		{
-			"icon_id": "5387465",
-			"name": "客服",
-			"font_class": "kefu",
-			"unicode": "eada",
-			"unicode_decimal": 60122
-		},
-		{
-			"icon_id": "5387468",
-			"name": "链接",
-			"font_class": "link",
-			"unicode": "eadc",
-			"unicode_decimal": 60124
-		},
-		{
-			"icon_id": "5387487",
-			"name": "钥匙",
-			"font_class": "key",
-			"unicode": "eae6",
-			"unicode_decimal": 60134
-		},
-		{
-			"icon_id": "5387517",
-			"name": "撤销",
-			"font_class": "revoke",
-			"unicode": "eaf0",
-			"unicode_decimal": 60144
-		},
-		{
-			"icon_id": "5387518",
-			"name": "首页",
-			"font_class": "home",
-			"unicode": "eaf1",
-			"unicode_decimal": 60145
-		},
-		{
-			"icon_id": "5387521",
-			"name": "菜单",
-			"font_class": "menu",
-			"unicode": "eaf2",
-			"unicode_decimal": 60146
-		},
-		{
-			"icon_id": "5387526",
-			"name": "导航",
-			"font_class": "navigation",
-			"unicode": "eaf3",
-			"unicode_decimal": 60147
-		},
-		{
-			"icon_id": "5387527",
-			"name": "加号",
-			"font_class": "plus",
-			"unicode": "eaf4",
-			"unicode_decimal": 60148
-		},
-		{
-			"icon_id": "5387532",
-			"name": "减号",
-			"font_class": "minus",
-			"unicode": "eaf5",
-			"unicode_decimal": 60149
-		},
-		{
-			"icon_id": "5387547",
-			"name": "视图矩阵",
-			"font_class": "view-matrix",
-			"unicode": "eafc",
-			"unicode_decimal": 60156
-		},
-		{
-			"icon_id": "5387549",
-			"name": "刷新",
-			"font_class": "refresh",
-			"unicode": "eafd",
-			"unicode_decimal": 60157
-		},
-		{
-			"icon_id": "5387551",
-			"name": "提示",
-			"font_class": "tip",
-			"unicode": "eafe",
-			"unicode_decimal": 60158
-		},
-		{
-			"icon_id": "5387558",
-			"name": "相机",
-			"font_class": "camera",
-			"unicode": "eb01",
-			"unicode_decimal": 60161
-		},
-		{
-			"icon_id": "5387560",
-			"name": "应用APP",
-			"font_class": "apply",
-			"unicode": "eb02",
-			"unicode_decimal": 60162
-		},
-		{
-			"icon_id": "5387571",
-			"name": "箭头_列表向右",
-			"font_class": "list-arrow-right",
-			"unicode": "eb03",
-			"unicode_decimal": 60163
-		},
-		{
-			"icon_id": "5387573",
-			"name": "箭头_列表收起",
-			"font_class": "list-arrow-top",
-			"unicode": "eb04",
-			"unicode_decimal": 60164
-		},
-		{
-			"icon_id": "5387574",
-			"name": "箭头_列表向左",
-			"font_class": "list-arrow-left",
-			"unicode": "eb05",
-			"unicode_decimal": 60165
-		},
-		{
-			"icon_id": "5387575",
-			"name": "箭头_切换向下",
-			"font_class": "switch-arrow-down",
-			"unicode": "eb06",
-			"unicode_decimal": 60166
-		},
-		{
-			"icon_id": "5387576",
-			"name": "箭头_列表展开",
-			"font_class": "list-arrow-down",
-			"unicode": "eb07",
-			"unicode_decimal": 60167
-		},
-		{
-			"icon_id": "5387577",
-			"name": "箭头_切换右",
-			"font_class": "switch-arrow-right",
-			"unicode": "eb08",
-			"unicode_decimal": 60168
-		},
-		{
-			"icon_id": "5387578",
-			"name": "箭头_切换向上",
-			"font_class": "switch-arrow-top",
-			"unicode": "eb09",
-			"unicode_decimal": 60169
-		},
-		{
-			"icon_id": "5387579",
-			"name": "箭头_切换左",
-			"font_class": "switch-arrow-left",
-			"unicode": "eb0a",
-			"unicode_decimal": 60170
-		},
-		{
-			"icon_id": "5387580",
-			"name": "箭头_上一页",
-			"font_class": "pre",
-			"unicode": "eb0b",
-			"unicode_decimal": 60171
-		},
-		{
-			"icon_id": "5387581",
-			"name": "按钮_箭头向左",
-			"font_class": "arrow-o-left",
-			"unicode": "eb0c",
-			"unicode_decimal": 60172
-		},
-		{
-			"icon_id": "5387582",
-			"name": "箭头_下一页",
-			"font_class": "next",
-			"unicode": "eb0d",
-			"unicode_decimal": 60173
-		},
-		{
-			"icon_id": "5387583",
-			"name": "箭头_向右",
-			"font_class": "arrow-right",
-			"unicode": "eb0e",
-			"unicode_decimal": 60174
-		},
-		{
-			"icon_id": "5387584",
-			"name": "箭头_向左",
-			"font_class": "arrow-left",
-			"unicode": "eb0f",
-			"unicode_decimal": 60175
-		},
-		{
-			"icon_id": "5387586",
-			"name": "箭头_上下切换",
-			"font_class": "arrow-switch",
-			"unicode": "eb10",
-			"unicode_decimal": 60176
-		},
-		{
-			"icon_id": "5387587",
-			"name": "箭头_页面_向上",
-			"font_class": "arrow-page-top",
-			"unicode": "eb11",
-			"unicode_decimal": 60177
-		},
-		{
-			"icon_id": "5387588",
-			"name": "箭头_向下",
-			"font_class": "arrow-down",
-			"unicode": "eb12",
-			"unicode_decimal": 60178
-		},
-		{
-			"icon_id": "5387589",
-			"name": "箭头_向上",
-			"font_class": "arrow-top",
-			"unicode": "eb13",
-			"unicode_decimal": 60179
-		},
-		{
-			"icon_id": "5387591",
-			"name": "箭头_页面_向下",
-			"font_class": "arrow-page-down",
-			"unicode": "eb14",
-			"unicode_decimal": 60180
-		},
-		{
-			"icon_id": "5387592",
-			"name": "箭头_页面_向右",
-			"font_class": "arrow-page-right",
-			"unicode": "eb15",
-			"unicode_decimal": 60181
-		},
-		{
-			"icon_id": "5387596",
-			"name": "箭头_左右切换",
-			"font_class": "arrow-level-swtich",
-			"unicode": "eb16",
-			"unicode_decimal": 60182
-		},
-		{
-			"icon_id": "5387601",
-			"name": "箭头_页面_向左",
-			"font_class": "arrow-page-left",
-			"unicode": "eb17",
-			"unicode_decimal": 60183
-		},
-		{
-			"icon_id": "5387606",
-			"name": "全屏",
-			"font_class": "fullscreen",
-			"unicode": "eb18",
-			"unicode_decimal": 60184
-		},
-		{
-			"icon_id": "5387609",
-			"name": "上下展开",
-			"font_class": "spread",
-			"unicode": "eb19",
-			"unicode_decimal": 60185
-		},
-		{
-			"icon_id": "5387612",
-			"name": "上传",
-			"font_class": "upload",
-			"unicode": "eb1a",
-			"unicode_decimal": 60186
-		},
-		{
-			"icon_id": "5387616",
-			"name": "置顶",
-			"font_class": "overhead",
-			"unicode": "eb1b",
-			"unicode_decimal": 60187
-		},
-		{
-			"icon_id": "5387644",
-			"name": "表情",
-			"font_class": "expression",
-			"unicode": "eb21",
-			"unicode_decimal": 60193
-		},
-		{
-			"icon_id": "5387650",
-			"name": "个人头像",
-			"font_class": "user",
-			"unicode": "eb24",
-			"unicode_decimal": 60196
-		},
-		{
-			"icon_id": "5387651",
-			"name": "分享",
-			"font_class": "share",
-			"unicode": "eb25",
-			"unicode_decimal": 60197
-		},
-		{
-			"icon_id": "5387653",
-			"name": "群组",
-			"font_class": "user-group",
-			"unicode": "eb26",
-			"unicode_decimal": 60198
-		},
-		{
-			"icon_id": "5387655",
-			"name": "收藏",
-			"font_class": "collection",
-			"unicode": "eb27",
-			"unicode_decimal": 60199
-		},
-		{
-			"icon_id": "5387658",
-			"name": "喜爱",
-			"font_class": "love",
-			"unicode": "eb28",
-			"unicode_decimal": 60200
-		},
-		{
-			"icon_id": "5387666",
-			"name": "时间",
-			"font_class": "time",
-			"unicode": "eb2a",
-			"unicode_decimal": 60202
-		},
-		{
-			"icon_id": "5387667",
-			"name": "日期",
-			"font_class": "calendar",
-			"unicode": "eb2b",
-			"unicode_decimal": 60203
-		},
-		{
-			"icon_id": "5387669",
-			"name": "树状图",
-			"font_class": "tree-view",
-			"unicode": "eb2c",
-			"unicode_decimal": 60204
-		},
-		{
-			"icon_id": "5387672",
-			"name": "云上传",
-			"font_class": "clound-upload",
-			"unicode": "eb2d",
-			"unicode_decimal": 60205
-		},
-		{
-			"icon_id": "5387673",
-			"name": "云下载",
-			"font_class": "clound-download",
-			"unicode": "eb2e",
-			"unicode_decimal": 60206
-		},
-		{
-			"icon_id": "5387674",
-			"name": "折线图",
-			"font_class": "line-chart",
-			"unicode": "eb2f",
-			"unicode_decimal": 60207
-		},
-		{
-			"icon_id": "5387675",
-			"name": "柱状图",
-			"font_class": "bar-chart",
-			"unicode": "eb30",
-			"unicode_decimal": 60208
-		},
-		{
-			"icon_id": "5387735",
-			"name": "眼睛_隐藏",
-			"font_class": "hide",
-			"unicode": "eb45",
-			"unicode_decimal": 60229
-		},
-		{
-			"icon_id": "5387736",
-			"name": "眼睛_显示",
-			"font_class": "display",
-			"unicode": "eb46",
-			"unicode_decimal": 60230
-		},
-		{
-			"icon_id": "5387748",
-			"name": "打印机_o",
-			"font_class": "printer",
-			"unicode": "eb48",
-			"unicode_decimal": 60232
-		},
-		{
-			"icon_id": "5387816",
-			"name": "蓝牙_o",
-			"font_class": "bluetooth",
-			"unicode": "eb63",
-			"unicode_decimal": 60259
-		},
-		{
-			"icon_id": "5362910",
-			"name": "打钩",
-			"font_class": "tick",
-			"unicode": "e64f",
-			"unicode_decimal": 58959
-		},
-		{
-			"icon_id": "5675157",
-			"name": "关  闭",
-			"font_class": "close",
-			"unicode": "e635",
-			"unicode_decimal": 58933
-		},
-		{
-			"icon_id": "21095772",
-			"name": "左旋转",
-			"font_class": "rotate-reverse",
-			"unicode": "e608",
-			"unicode_decimal": 58888
-		},
-		{
-			"icon_id": "21095807",
-			"name": "右旋转",
-			"font_class": "rotate",
-			"unicode": "e609",
-			"unicode_decimal": 58889
-		}
-	]
+    "id": "2691957",
+    "name": "try-ui",
+    "font_family": "try-icon",
+    "css_prefix_text": "t-icon-",
+    "description": "",
+    "glyphs": [
+        {
+            "icon_id": "257405",
+            "name": "close_fill",
+            "font_class": "close-fill",
+            "unicode": "e6a6",
+            "unicode_decimal": 59046
+        },
+        {
+            "icon_id": "8106245",
+            "name": "close",
+            "font_class": "close",
+            "unicode": "e69e",
+            "unicode_decimal": 59038
+        },
+        {
+            "icon_id": "59346",
+            "name": "error",
+            "font_class": "error-fill",
+            "unicode": "e62b",
+            "unicode_decimal": 58923
+        },
+        {
+            "icon_id": "4765727",
+            "name": "info-circle",
+            "font_class": "info-circle",
+            "unicode": "e77e",
+            "unicode_decimal": 59262
+        },
+        {
+            "icon_id": "4936483",
+            "name": "info-circle-fill",
+            "font_class": "info-circle-fill",
+            "unicode": "e844",
+            "unicode_decimal": 59460
+        },
+        {
+            "icon_id": "10273624",
+            "name": "loading",
+            "font_class": "loading",
+            "unicode": "e891",
+            "unicode_decimal": 59537
+        },
+        {
+            "icon_id": "11488140",
+            "name": "success",
+            "font_class": "success",
+            "unicode": "e767",
+            "unicode_decimal": 59239
+        },
+        {
+            "icon_id": "11488163",
+            "name": "warning",
+            "font_class": "warning",
+            "unicode": "e76d",
+            "unicode_decimal": 59245
+        },
+        {
+            "icon_id": "11488326",
+            "name": "success-fill",
+            "font_class": "success-fill",
+            "unicode": "e78d",
+            "unicode_decimal": 59277
+        },
+        {
+            "icon_id": "11488341",
+            "name": "warning-fill",
+            "font_class": "warning-fill",
+            "unicode": "e790",
+            "unicode_decimal": 59280
+        },
+        {
+            "icon_id": "15838473",
+            "name": "error",
+            "font_class": "error",
+            "unicode": "e66f",
+            "unicode_decimal": 58991
+        },
+        {
+            "icon_id": "5387377",
+            "name": "标签",
+            "font_class": "label",
+            "unicode": "eabd",
+            "unicode_decimal": 60093
+        },
+        {
+            "icon_id": "5387379",
+            "name": "保存",
+            "font_class": "save",
+            "unicode": "eabe",
+            "unicode_decimal": 60094
+        },
+        {
+            "icon_id": "5387380",
+            "name": "编辑",
+            "font_class": "edit",
+            "unicode": "eabf",
+            "unicode_decimal": 60095
+        },
+        {
+            "icon_id": "5387381",
+            "name": "导出",
+            "font_class": "export",
+            "unicode": "eac0",
+            "unicode_decimal": 60096
+        },
+        {
+            "icon_id": "5387382",
+            "name": "导入",
+            "font_class": "import",
+            "unicode": "eac1",
+            "unicode_decimal": 60097
+        },
+        {
+            "icon_id": "5387384",
+            "name": "复制",
+            "font_class": "copy",
+            "unicode": "eac2",
+            "unicode_decimal": 60098
+        },
+        {
+            "icon_id": "5387388",
+            "name": "解锁",
+            "font_class": "unlock",
+            "unicode": "eac3",
+            "unicode_decimal": 60099
+        },
+        {
+            "icon_id": "5387391",
+            "name": "锁定",
+            "font_class": "suoding",
+            "unicode": "eac4",
+            "unicode_decimal": 60100
+        },
+        {
+            "icon_id": "5387393",
+            "name": "添加附件",
+            "font_class": "paperclip",
+            "unicode": "eac5",
+            "unicode_decimal": 60101
+        },
+        {
+            "icon_id": "5387397",
+            "name": "文件夹",
+            "font_class": "folder",
+            "unicode": "eac6",
+            "unicode_decimal": 60102
+        },
+        {
+            "icon_id": "5387456",
+            "name": "播放",
+            "font_class": "play",
+            "unicode": "ead8",
+            "unicode_decimal": 60120
+        },
+        {
+            "icon_id": "5387465",
+            "name": "客服",
+            "font_class": "kefu",
+            "unicode": "eada",
+            "unicode_decimal": 60122
+        },
+        {
+            "icon_id": "5387468",
+            "name": "链接",
+            "font_class": "link",
+            "unicode": "eadc",
+            "unicode_decimal": 60124
+        },
+        {
+            "icon_id": "5387487",
+            "name": "钥匙",
+            "font_class": "key",
+            "unicode": "eae6",
+            "unicode_decimal": 60134
+        },
+        {
+            "icon_id": "5387517",
+            "name": "撤销",
+            "font_class": "revoke",
+            "unicode": "eaf0",
+            "unicode_decimal": 60144
+        },
+        {
+            "icon_id": "5387518",
+            "name": "首页",
+            "font_class": "home",
+            "unicode": "eaf1",
+            "unicode_decimal": 60145
+        },
+        {
+            "icon_id": "5387521",
+            "name": "菜单",
+            "font_class": "menu",
+            "unicode": "eaf2",
+            "unicode_decimal": 60146
+        },
+        {
+            "icon_id": "5387526",
+            "name": "导航",
+            "font_class": "navigation",
+            "unicode": "eaf3",
+            "unicode_decimal": 60147
+        },
+        {
+            "icon_id": "5387527",
+            "name": "加号",
+            "font_class": "plus",
+            "unicode": "eaf4",
+            "unicode_decimal": 60148
+        },
+        {
+            "icon_id": "5387532",
+            "name": "减号",
+            "font_class": "minus",
+            "unicode": "eaf5",
+            "unicode_decimal": 60149
+        },
+        {
+            "icon_id": "5387547",
+            "name": "视图矩阵",
+            "font_class": "view-matrix",
+            "unicode": "eafc",
+            "unicode_decimal": 60156
+        },
+        {
+            "icon_id": "5387549",
+            "name": "刷新",
+            "font_class": "refresh",
+            "unicode": "eafd",
+            "unicode_decimal": 60157
+        },
+        {
+            "icon_id": "5387551",
+            "name": "提示",
+            "font_class": "tip",
+            "unicode": "eafe",
+            "unicode_decimal": 60158
+        },
+        {
+            "icon_id": "5387558",
+            "name": "相机",
+            "font_class": "camera",
+            "unicode": "eb01",
+            "unicode_decimal": 60161
+        },
+        {
+            "icon_id": "5387560",
+            "name": "应用APP",
+            "font_class": "apply",
+            "unicode": "eb02",
+            "unicode_decimal": 60162
+        },
+        {
+            "icon_id": "5387571",
+            "name": "箭头_列表向右",
+            "font_class": "list-arrow-right",
+            "unicode": "eb03",
+            "unicode_decimal": 60163
+        },
+        {
+            "icon_id": "5387573",
+            "name": "箭头_列表收起",
+            "font_class": "list-arrow-top",
+            "unicode": "eb04",
+            "unicode_decimal": 60164
+        },
+        {
+            "icon_id": "5387574",
+            "name": "箭头_列表向左",
+            "font_class": "list-arrow-left",
+            "unicode": "eb05",
+            "unicode_decimal": 60165
+        },
+        {
+            "icon_id": "5387575",
+            "name": "箭头_切换向下",
+            "font_class": "switch-arrow-down",
+            "unicode": "eb06",
+            "unicode_decimal": 60166
+        },
+        {
+            "icon_id": "5387576",
+            "name": "箭头_列表展开",
+            "font_class": "list-arrow-down",
+            "unicode": "eb07",
+            "unicode_decimal": 60167
+        },
+        {
+            "icon_id": "5387577",
+            "name": "箭头_切换右",
+            "font_class": "switch-arrow-right",
+            "unicode": "eb08",
+            "unicode_decimal": 60168
+        },
+        {
+            "icon_id": "5387578",
+            "name": "箭头_切换向上",
+            "font_class": "switch-arrow-top",
+            "unicode": "eb09",
+            "unicode_decimal": 60169
+        },
+        {
+            "icon_id": "5387579",
+            "name": "箭头_切换左",
+            "font_class": "switch-arrow-left",
+            "unicode": "eb0a",
+            "unicode_decimal": 60170
+        },
+        {
+            "icon_id": "5387580",
+            "name": "箭头_上一页",
+            "font_class": "pre",
+            "unicode": "eb0b",
+            "unicode_decimal": 60171
+        },
+        {
+            "icon_id": "5387581",
+            "name": "按钮_箭头向左",
+            "font_class": "arrow-o-left",
+            "unicode": "eb0c",
+            "unicode_decimal": 60172
+        },
+        {
+            "icon_id": "5387582",
+            "name": "箭头_下一页",
+            "font_class": "next",
+            "unicode": "eb0d",
+            "unicode_decimal": 60173
+        },
+        {
+            "icon_id": "5387583",
+            "name": "箭头_向右",
+            "font_class": "arrow-right",
+            "unicode": "eb0e",
+            "unicode_decimal": 60174
+        },
+        {
+            "icon_id": "5387584",
+            "name": "箭头_向左",
+            "font_class": "arrow-left",
+            "unicode": "eb0f",
+            "unicode_decimal": 60175
+        },
+        {
+            "icon_id": "5387586",
+            "name": "箭头_上下切换",
+            "font_class": "arrow-switch",
+            "unicode": "eb10",
+            "unicode_decimal": 60176
+        },
+        {
+            "icon_id": "5387587",
+            "name": "箭头_页面_向上",
+            "font_class": "arrow-page-top",
+            "unicode": "eb11",
+            "unicode_decimal": 60177
+        },
+        {
+            "icon_id": "5387588",
+            "name": "箭头_向下",
+            "font_class": "arrow-down",
+            "unicode": "eb12",
+            "unicode_decimal": 60178
+        },
+        {
+            "icon_id": "5387589",
+            "name": "箭头_向上",
+            "font_class": "arrow-top",
+            "unicode": "eb13",
+            "unicode_decimal": 60179
+        },
+        {
+            "icon_id": "5387591",
+            "name": "箭头_页面_向下",
+            "font_class": "arrow-page-down",
+            "unicode": "eb14",
+            "unicode_decimal": 60180
+        },
+        {
+            "icon_id": "5387592",
+            "name": "箭头_页面_向右",
+            "font_class": "arrow-page-right",
+            "unicode": "eb15",
+            "unicode_decimal": 60181
+        },
+        {
+            "icon_id": "5387596",
+            "name": "箭头_左右切换",
+            "font_class": "arrow-level-swtich",
+            "unicode": "eb16",
+            "unicode_decimal": 60182
+        },
+        {
+            "icon_id": "5387601",
+            "name": "箭头_页面_向左",
+            "font_class": "arrow-page-left",
+            "unicode": "eb17",
+            "unicode_decimal": 60183
+        },
+        {
+            "icon_id": "5387606",
+            "name": "全屏",
+            "font_class": "fullscreen",
+            "unicode": "eb18",
+            "unicode_decimal": 60184
+        },
+        {
+            "icon_id": "5387609",
+            "name": "上下展开",
+            "font_class": "spread",
+            "unicode": "eb19",
+            "unicode_decimal": 60185
+        },
+        {
+            "icon_id": "5387612",
+            "name": "上传",
+            "font_class": "upload",
+            "unicode": "eb1a",
+            "unicode_decimal": 60186
+        },
+        {
+            "icon_id": "5387616",
+            "name": "置顶",
+            "font_class": "overhead",
+            "unicode": "eb1b",
+            "unicode_decimal": 60187
+        },
+        {
+            "icon_id": "5387644",
+            "name": "表情",
+            "font_class": "expression",
+            "unicode": "eb21",
+            "unicode_decimal": 60193
+        },
+        {
+            "icon_id": "5387650",
+            "name": "个人头像",
+            "font_class": "user",
+            "unicode": "eb24",
+            "unicode_decimal": 60196
+        },
+        {
+            "icon_id": "5387651",
+            "name": "分享",
+            "font_class": "share",
+            "unicode": "eb25",
+            "unicode_decimal": 60197
+        },
+        {
+            "icon_id": "5387653",
+            "name": "群组",
+            "font_class": "user-group",
+            "unicode": "eb26",
+            "unicode_decimal": 60198
+        },
+        {
+            "icon_id": "5387655",
+            "name": "收藏",
+            "font_class": "collection",
+            "unicode": "eb27",
+            "unicode_decimal": 60199
+        },
+        {
+            "icon_id": "5387658",
+            "name": "喜爱",
+            "font_class": "love",
+            "unicode": "eb28",
+            "unicode_decimal": 60200
+        },
+        {
+            "icon_id": "5387666",
+            "name": "时间",
+            "font_class": "time",
+            "unicode": "eb2a",
+            "unicode_decimal": 60202
+        },
+        {
+            "icon_id": "5387667",
+            "name": "日期",
+            "font_class": "calendar",
+            "unicode": "eb2b",
+            "unicode_decimal": 60203
+        },
+        {
+            "icon_id": "5387669",
+            "name": "树状图",
+            "font_class": "tree-view",
+            "unicode": "eb2c",
+            "unicode_decimal": 60204
+        },
+        {
+            "icon_id": "5387672",
+            "name": "云上传",
+            "font_class": "clound-upload",
+            "unicode": "eb2d",
+            "unicode_decimal": 60205
+        },
+        {
+            "icon_id": "5387673",
+            "name": "云下载",
+            "font_class": "clound-download",
+            "unicode": "eb2e",
+            "unicode_decimal": 60206
+        },
+        {
+            "icon_id": "5387674",
+            "name": "折线图",
+            "font_class": "line-chart",
+            "unicode": "eb2f",
+            "unicode_decimal": 60207
+        },
+        {
+            "icon_id": "5387675",
+            "name": "柱状图",
+            "font_class": "bar-chart",
+            "unicode": "eb30",
+            "unicode_decimal": 60208
+        },
+        {
+            "icon_id": "5387735",
+            "name": "眼睛_隐藏",
+            "font_class": "hide",
+            "unicode": "eb45",
+            "unicode_decimal": 60229
+        },
+        {
+            "icon_id": "5387736",
+            "name": "眼睛_显示",
+            "font_class": "display",
+            "unicode": "eb46",
+            "unicode_decimal": 60230
+        },
+        {
+            "icon_id": "5387748",
+            "name": "打印机_o",
+            "font_class": "printer",
+            "unicode": "eb48",
+            "unicode_decimal": 60232
+        },
+        {
+            "icon_id": "5387816",
+            "name": "蓝牙_o",
+            "font_class": "bluetooth",
+            "unicode": "eb63",
+            "unicode_decimal": 60259
+        },
+        {
+            "icon_id": "5362910",
+            "name": "打钩",
+            "font_class": "tick",
+            "unicode": "e64f",
+            "unicode_decimal": 58959
+        },
+        {
+            "icon_id": "21095772",
+            "name": "左旋转",
+            "font_class": "rotate-reverse",
+            "unicode": "e608",
+            "unicode_decimal": 58888
+        },
+        {
+            "icon_id": "21095807",
+            "name": "右旋转",
+            "font_class": "rotate",
+            "unicode": "e609",
+            "unicode_decimal": 58889
+        }
+    ]
 }

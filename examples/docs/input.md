@@ -11,8 +11,20 @@
 ```html
 
 <template>
-    <t-input placeholder="输入"></t-input>
+    <t-row>
+        <t-input placeholder="输入" v-model="content"></t-input>
+    </t-row>
+    <t-row>您输入的内容为:<span v-text="content"></span></t-row>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                content: ''
+            }
+        }
+    }
+</script>
 ```
 
 :::
