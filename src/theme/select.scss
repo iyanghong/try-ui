@@ -1,0 +1,68 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+.t-select {
+    width: 100%;
+    height: $--select-default-height;
+    background-color: $--color-white;
+    border: 1px solid #dcdfe6;
+    border-radius: $--select-border-radius;
+    cursor: pointer;
+    position: relative;
+    padding: 0 $--select-horizontal-padding;
+
+    &:hover,
+    &:focus {
+        border-color: $--color-blue;
+    }
+
+    .t-select--value {
+        line-height: $--select-default-height;
+    }
+
+    .t-select--icon {
+        line-height: $--select-default-height;
+        float: right;
+        transition: transform .5s;
+        @include when(dropdown) {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.t-select--options {
+    width: 100%;
+    background-color: $--color-white;
+    border: $--border-base;
+    border-radius: $--select-border-radius;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+    .t-option {
+        height: $--select-default-height;
+        line-height: $--select-default-height;
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+
+        & > span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 0 $--select-horizontal-padding;
+        }
+
+        @include when(selected) {
+            background-color: $--select-option-active-color;
+        }
+
+        &:hover {
+            background-color: $--select-option-hover-color;
+        }
+    }
+}
