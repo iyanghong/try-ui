@@ -16,8 +16,7 @@ $--color-info: #95949A !default;
 $--color-text-placeholder: #C0C4CC !default;
 
 
-$text-color: #444 !default;
-
+$--text-color: #1f2225 !default;
 
 $--sm: 768px !default;
 $--md: 992px !default;
@@ -112,3 +111,7 @@ $--tag-medium-height: 28px !default;
 $--tag-small-height: 24px !default;
 $--tag-mini-height: 20px !default;
 
+
+// Alert
+$--alert-padding:8px 16px !default;
+$--alert-border-radius:$--border-radius-base !default;

@@ -1,0 +1,60 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+@mixin alert-theme($name,$alertColor) {
+    &.t-alert--#{$name} {
+        background-color: mix($alertColor, $--color-white, 10%);
+        border-color: mix($alertColor, $--color-white, 30%);
+
+        .t-alert--icon {
+            color: $alertColor;
+        }
+    }
+}
+
+.t-alert {
+    width: 100%;
+    padding: $--alert-padding;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: $--alert-border-radius;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity .5s;
+    border-width: 1px;
+    border-style: solid;
+    background-color: mix($--color-info, $--color-white, 10%);
+    border-color: mix($--color-info, $--color-white, 30%);
+
+    @include alert-theme(success, $--color-success);
+    @include alert-theme(danger, $--color-danger);
+    @include alert-theme(info, $--color-primary);
+    @include alert-theme(warning, $--color-warning);
+
+    .t-alert--title {
+        font-size: 16px;
+        color: $--text-color;
+        font-weight: 500;
+    }
+
+    .t-alert--icon {
+        font-size: 20px;
+        padding-right: 12px;
+        color: $--color-info;
+    }
+    .t-alert--close{
+        width: 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        i{
+            cursor: pointer;
+        }
+    }
+}
