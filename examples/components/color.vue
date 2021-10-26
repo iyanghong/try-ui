@@ -41,7 +41,7 @@ export default {
 @import "src/theme/common/variables.scss";
 
 .demo-color {
-    color: $text-color;
+    color: $--text-color;
 
     h3 {
         margin: 55px 0 20px;

@@ -57,7 +57,7 @@ export default {
 	z-index: 1;
 	border-bottom: 1px solid $--border-color;
 	@include headerFlex;
-	color: $text-color;
+	color: $--text-color;
 	justify-content: space-between;
 
 	.header-left, .header-right {
