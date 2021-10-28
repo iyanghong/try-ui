@@ -15,6 +15,10 @@ $--color-danger: #ea5455 !default; //危险辅助色
 $--color-info: #95949A !default;
 $--color-text-placeholder: #C0C4CC !default;
 
+$--fontColor-primary: #909399 !default;
+$--fontColor-success: #67c23a !default;
+$--fontColor-warning: #e6a23c !default;
+$--fontColor-danger: #f56c6c !default;
 
 $--text-color: #1f2225 !default;
 
@@ -23,13 +27,11 @@ $--md: 992px !default;
 $--lg: 1200px !default;
 $--xl: 1920px !default;
 
-$breakpoints: (
-    'xs' : (max-width: $--sm - 1),
+$breakpoints: ('xs' : (max-width: $--sm - 1),
     'sm' : (min-width: $--sm),
     'md' : (min-width: $--md),
     'lg' : (min-width: $--lg),
-    'xl' : (min-width: $--xl)
-);
+    'xl' : (min-width: $--xl));
 
 $namespace: 't';
 $separator-top: '-';

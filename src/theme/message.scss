@@ -1,0 +1,73 @@
+@import "./common/variables.scss";
+
+@mixin message-type-style($type, $color, $bgColor) {
+    &.t-message--#{$type} {
+        background-color: mix($bgColor, $--color-white, 10%);
+
+        .t-message--content {
+            color: $color;
+        }
+
+        .t-message--icon {
+            color: $color;
+        }
+    }
+}
+
+.t-message {
+    min-width: 380px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #EBEEF5;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    background-color: #edf2fc;
+    transition: opacity .3s,
+        transform .4s,
+        top .4s;
+    overflow: hidden;
+    padding: 15px 15px 15px 20px;
+    display: flex;
+    align-items: center;
+
+    .t-message--content {
+        font-size: 14px;
+        color: #909399;
+    }
+
+    .t-message--icon {
+        color: #909399;
+        padding-right: 10px;
+
+    }
+
+    .t-message--close {
+        width: 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    @include message-type-style(success, $--fontColor-success, $--color-success);
+    @include message-type-style(warning, $--fontColor-warning, $--color-warning);
+    @include message-type-style(danger, $--fontColor-danger, $--color-danger);
+}
+
+.t-message.is-center {
+    justify-content: center;
+}
+
+.t-message-fade-enter,
+.t-message-fade-leave-active {
+    opacity: 0;
+    transform: translate(-50%, -100%)
+}

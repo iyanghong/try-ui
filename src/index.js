@@ -9,41 +9,46 @@ import Scrollbar from './components/scrollbar/index.js';
 import Select from './components/select/index.js';
 import Tag from './components/tag/index.js';
 import Alert from './components/alert/index.js';
+import Message from './components/message/index.js';
 
 const components = [
-    Input,
-    Button,
-    ButtonGroup,
-    Tooltip,
-    Col,
-    Row,
-    Space,
-    Scrollbar,
-    Select,
-    Tag,
-    Alert
+  Input,
+  Button,
+  ButtonGroup,
+  Tooltip,
+  Col,
+  Row,
+  Space,
+  Scrollbar,
+  Select,
+  Tag,
+  Alert,
+  Message
 ];
 
 
 const install = (Vue) => {
-    components.forEach(component => {
-        Vue.component(component.name, component);
-    });
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
+  Vue.prototype.$message = Message
+  console.log(Vue.prototype);
 }
 
 
 export default {
-    version: '0.0.1',
-    install,
-    Input,
-    Button,
-    ButtonGroup,
-    Tooltip,
-    Col,
-    Row,
-    Space,
-    Scrollbar,
-    Select,
-    Tag,
-    Alert
+  version: '0.0.1',
+  install,
+  Input,
+  Button,
+  ButtonGroup,
+  Tooltip,
+  Col,
+  Row,
+  Space,
+  Scrollbar,
+  Select,
+  Tag,
+  Alert,
+  Message
 }

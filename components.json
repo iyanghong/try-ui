@@ -9,5 +9,6 @@
     "scrollbar": "./components/scrollbar/index.js",
     "select": "./components/select/index.js",
     "tag": "./components/tag/index.js",
-    "alert": "./components/alert/index.js"
+    "alert": "./components/alert/index.js",
+    "message": "./components/message/index.js"
 }
