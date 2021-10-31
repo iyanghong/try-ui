@@ -1,0 +1,79 @@
+@import "./common/variables.scss";
+@import "./mixins/mixins.scss";
+
+.t-modal-layer-visible-enter, .t-modal-layer-visible-leave-to {
+  transform: translate3d(0, -20px, 0);
+  opacity: 0
+}
+
+.t-modal-layer-visible-leave, .t-modal-layer-visible-enter-to {
+  transform: translate3d(0, 0, 0);
+  opacity: 1
+}
+
+.t-modal-layer-visible-enter-active, .t-modal-layer-visible-leave-active {
+  transition: all .3s
+}
+
+.t-modal--wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+
+  .t-modal {
+    z-index: 2002;
+  }
+}
+
+.t-modal {
+  position: relative;
+  margin: 0 auto 50px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  background: $--model-background-color;
+  z-index: 2001;
+
+  .t-modal--title {
+    line-height: 24px;
+    font-size: 18px;
+    color: $--modal-title-color;
+  }
+
+  .t-modal--header {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .t-modal--close{
+      padding: 0;
+      background: 0 0;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        color: #1E9FFF;
+      }
+    }
+  }
+  .t-modal--body{
+    padding: 12px;
+    color: $--modal-body-color;
+    font-size: 14px;
+    word-break: break-all;
+  }
+  .t-modal--footer{
+    padding: 12px;
+    box-sizing: border-box;
+  }
+}

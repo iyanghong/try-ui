@@ -10,6 +10,7 @@ import Select from './components/select/index.js';
 import Tag from './components/tag/index.js';
 import Alert from './components/alert/index.js';
 import Message from './components/message/index.js';
+import Modal from './components/modal/index.js';
 
 const components = [
   Input,
@@ -23,16 +24,16 @@ const components = [
   Select,
   Tag,
   Alert,
-  Message
+  Message,
+  Modal
 ];
 
 
 const install = (Vue) => {
   components.forEach(component => {
     Vue.component(component.name, component);
+    Vue.prototype.$message = Message;
   });
-  Vue.prototype.$message = Message
-  console.log(Vue.prototype);
 }
 
 
@@ -50,5 +51,6 @@ export default {
   Select,
   Tag,
   Alert,
-  Message
+  Message,
+  Modal
 }
