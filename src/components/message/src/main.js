@@ -1,11 +1,16 @@
 import Vue from 'vue';
 import Main from './message.vue';
+import { isVNode } from '../../../utils/types';
 let MessageConstructor = Vue.extend(Main);
 let example;
 let examples = [];
 let seed = 1;
+let placement
+let isTop
 const Message = function (options) {
 
+  placement = options.placement === undefined ? 'top-center' : options.placement
+  isTop = placement.includes("top")
   options = options || {};
   if (typeof options === 'string') {
     options = {
@@ -15,7 +20,7 @@ const Message = function (options) {
   let id = 'message_' + seed++;
   let userOnClose = options.onClose;
   options.onClose = function () {
-    Message.close(id, userOnClose);
+    Message.close(id, userOnClose, placement);
   };
 
   example = new MessageConstructor({
@@ -23,16 +28,31 @@ const Message = function (options) {
   });
 
   example.id = id
+  if (isVNode(example.message)) {
+    example.$slots.default = [example.message]
+    example.message = null
+  }
   example.$mount()
   document.body.appendChild(example.$el);
   let verticalOffset = options.offset || 20;
+  examples.push(example)
   examples.forEach(item => {
+    let classList = item.$el.classList
     verticalOffset += item.$el.offsetHeight + 16;
+    classList.remove(classList[2]);
+    classList.add(`t-message--${placement}`)
+    if (isTop && item.$el.style.bottom != "") {
+      item.$el.style.top = item.$el.style.bottom
+      item.$el.style.bottom = ""
+    } else if (!isTop && item.$el.style.top != "") {
+      item.$el.style.bottom = item.$el.style.top
+      item.$el.style.top = ""
+    }
   });
   example.verticalOffset = verticalOffset;
   example.visible = true;
   example.$el.style.zIndex = 2001
-  examples.push(example)
+  // example.$el.classList.add(`t-message--${placement}`)
   return example
 }
 
@@ -55,8 +75,7 @@ Message.close = function (id, userOnClose) {
   if (len <= 0 || index === -1) return
   for (let i = index; i < len - 1; i++) {
     let dom = examples[i].$el
-    dom.style.top = (parseInt(dom.style.top, 10) - removedHeight - 16) + 'px'
-
+    isTop ? dom.style.top = (parseInt(dom.style.top, 10) - removedHeight - 16) + 'px' : dom.style.bottom = (parseInt(dom.style.bottom, 10) - removedHeight - 16) + 'px'
   }
 }
 Message.closeAll = function () {

@@ -15,30 +15,31 @@
 }
 
 .t-message {
-    min-width: 380px;
+    min-width: 330px;
     box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid #EBEEF5;
     position: fixed;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
+    // left: 50%;
+    // top: 20px;
+    // transform: translateX(-50%);
+    // transform: translateX(0);
     background-color: #edf2fc;
-    transition: opacity .3s,
-        transform .4s,
-        top .4s;
+    // transition: opacity .3s,
+    //     transform .4s,
+    //     top .4s;
     overflow: hidden;
-    padding: 15px 15px 15px 20px;
+    padding: 13px 15px 13px 20px;
     display: flex;
     align-items: center;
 
     .t-message--content {
-        font-size: 14px;
-        color: #909399;
+        font-size: 13px;
+        color: $--fontColor-primary;
     }
 
     .t-message--icon {
-        color: #909399;
+        color: $--fontColor-primary;
         padding-right: 10px;
 
     }
@@ -62,12 +63,42 @@
     @include message-type-style(danger, $--fontColor-danger, $--color-danger);
 }
 
+.t-message--top-center {
+    left: 50%;
+    bottom: none;
+    transform: translateX(-50%);
+}
+
+.t-message--bottom-center {
+    left: 50%;
+    top: none;
+    transform: translateX(-50%);
+}
+
+.t-message--top-left,
+.t-message--bottom-left {
+    left: 0;
+    transform: translateX(0%);
+}
+
+.t-message--top-right,
+.t-message--bottom-right {
+    right: 0;
+    transform: translateX(0%);
+}
+
 .t-message.is-center {
     justify-content: center;
 }
 
-.t-message-fade-enter,
-.t-message-fade-leave-active {
+.t-message-center-enter,
+.t-message-center-leave-active {
     opacity: 0;
-    transform: translate(-50%, -100%)
+    transform: translate(-50%, -50%);
+}
+
+.t-message-left-right-enter,
+.t-message-left-right-leave-active {
+    opacity: 0;
+    transform: translate(0%, -50%);
 }

@@ -1,5 +1,5 @@
 <template>
-  <transition name="t-message-fade"
+  <transition :name="transitionName"
               @after-leave="handleAfterLeave">
     <div v-show="visible"
          class="t-message"
@@ -29,6 +29,14 @@ const typeMap = {
   "info": "t-icon-info-circle-fill",
   "danger": "t-icon-error-fill"
 }
+const placementMap = {
+  "top-center": 't-message-center',
+  "top-left": 't-message-left-right',
+  "top-right": 't-message-left-right',
+  "bottom-center": 't-message-center',
+  "bottom-left": 't-message-left-right',
+  "bottom-right": 't-message-left-right'
+}
 export default {
   name: 'TMessage',
   data () {
@@ -42,16 +50,20 @@ export default {
       type: 'info',
       showIcon: true,
       icon: '',
-      showClose: true,
-      center: false
+      showClose: false,
+      center: false,
+      placement: 'top-center'
     }
   },
   computed: {
     positionStyle () {
-      return { 'top': `${this.verticalOffset}px` }
+      return this.placement.includes('top') ? { top: `${this.verticalOffset}px`, transition: 'opacity .3s,transform .4s,top .4s' } : { bottom: `${this.verticalOffset}px`, transition: 'opacity .3s,transform .4s,bottom .4s' }
     },
     iconClass () {
       return this.type ? typeMap[this.type] : typeMap.info
+    },
+    transitionName () {
+      return placementMap[this.placement]
     }
   },
   mounted () {
