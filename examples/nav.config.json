@@ -69,6 +69,10 @@
         {
           "path": "/message",
           "title": "消息提示"
+        },
+        {
+          "path": "/modal",
+          "title": "模态框"
         }
       ]
     }
