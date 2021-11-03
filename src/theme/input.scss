@@ -1,13 +1,37 @@
 @import "./common/variables.scss";
 
-.t-input--inner {
+
+@mixin input-status-color($status,$color) {
+  .t-#{$status} {
+    .t-input--inner {
+      border-color: #{$color};
+
+      &:hover, &:focus {
+        border-color: #{$color};
+      }
+    }
+  }
+}
+
+
+.t-input--disabled .t-input--inner {
+  color: #b1b1b1;
+  background-color: #f7f7f7;
+  border-color: $--border-color;
+  cursor: not-allowed;
+}
+
+.t-input {
+  width: 100%;
+
+  .t-input--inner {
     width: 100%;
-    background-color: #fff;
+    background-color: $--input-background-color;
     background-image: none;
-    border: 1px solid #dcdfe6;
+    border: $--input-border;
     border-radius: $--input-border-radius;
     box-sizing: border-box;
-    color: #606266;
+    color: $--input-font-color;
     display: inline-block;
     padding: 0 16px;
     font-size: inherit;
@@ -16,179 +40,195 @@
     line-height: $--input-default-height;
 
     &:hover, &:focus {
-        border-color: $--input-hover-color;
+      border-color: $--input-hover-color;
     }
 
     &::-webkit-input-placeholder {
-        font-size: 0.8em;
+      font-size: 0.8em;
     }
+  }
+
+  &.t-input--group-prefix {
+    position: relative;
+
+    .t-input--prefix {
+      height: 100%;
+      position: absolute;
+      left: 5px;
+      top: 0;
+      color: #c0c4cc;
+
+
+    }
+
+    .t-input--inner {
+      padding-left: 25px;
+    }
+  }
+
+  &.t-input--group-suffix .t-input--suffix,
+  &.t-input--group-prefix .t-input--prefix {
+    i {
+      line-height: $--input-default-height;
+    }
+  }
+
+  &.t-input--group-suffix {
+    position: relative;
+
+    .t-input--suffix {
+      height: 100%;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      color: #c0c4cc;
+    }
+
+    .t-input--inner {
+      padding-right: 25px;
+    }
+  }
+
+
+  &.t-input--medium {
+
+    font-size: $--input-medium-font-size;
+
+    .t-input--inner {
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+    }
+
+    &.t-input--group-suffix .t-input--suffix,
+    &.t-input--group-prefix .t-input--prefix {
+      i {
+        line-height: $--input-medium-height;
+      }
+    }
+  }
+
+  &.t-input--small {
+    font-size: $--input-small-font-size;
+
+    .t-input--inner {
+      height: $--input-small-height;
+      line-height: $--input-small-height;
+    }
+
+    &.t-input--group-suffix .t-input--suffix,
+    &.t-input--group-prefix .t-input--prefix {
+      i {
+        line-height: $--input-small-height;
+      }
+    }
+  }
+
+  &.t-input--mini {
+
+    font-size: $--input-mini-font-size;
+
+    .t-input--inner {
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+    }
+
+    &.t-input--group-suffix .t-input--suffix,
+    &.t-input--group-prefix .t-input--prefix {
+      i {
+        line-height: $--input-mini-height;
+      }
+    }
+  }
+
+  &.t-input-group {
+    line-height: normal;
+    display: inline-table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    .t-input--inner {
+      display: table-cell;
+    }
+
+    .t-input--prepend, .t-input--append {
+      background-color: $--background-color-base;
+      color: $--color-info;
+      vertical-align: middle;
+      display: table-cell;
+      position: relative;
+      border: 1px solid $--color-text-placeholder;
+      border-radius: $--input-border-radius;
+      padding: 0 10px;
+      width: 1px;
+      white-space: nowrap;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .t-input--prepend {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .t-input--inner {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    .t-input--append {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .t-input--inner {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
 }
 
-@mixin input-status-color($status,$color) {
-    .t-#{$status} {
-        .t-input--inner {
-            border-color: #{$color};
-
-            &:hover, &:focus {
-                border-color: #{$color};
-            }
-        }
-    }
-}
 
 @include input-status-color(success, $--color-success);
 @include input-status-color(warning, $--color-warning);
 @include input-status-color(danger, $--color-danger);
 
-.t-input--disabled .t-input--inner {
-    color: #b1b1b1;
-    background-color: #f7f7f7;
-    border-color: $--border-color;
-    cursor: not-allowed;
-}
 
-.t-input {
+.t-textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+
+  .t-textarea--inner {
+    display: block;
+    resize: vertical;
     width: 100%;
-    &.t-input--group-prefix {
-        position: relative;
+    font-size: inherit;
+    padding: 5px 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    color: $--input-font-color;
+    background-image: none;
+    background-color: $--input-background-color;
+    border: $--input-border;
+    border-radius: $--input-border-radius;
 
-        .t-input--prefix {
-            height: 100%;
-            position: absolute;
-            left: 5px;
-            top: 0;
-            color: #c0c4cc;
-
-
-        }
-
-        .t-input--inner {
-            padding-left: 25px;
-        }
+    &::placeholder {
+      color: $--color-text-placeholder;
     }
 
-    &.t-input--group-suffix .t-input--suffix,
-    &.t-input--group-prefix .t-input--prefix {
-        i {
-            line-height: $--input-default-height;
-        }
+    &:hover {
+      border-color: $--input-hover-color;
     }
 
-    &.t-input--group-suffix {
-        position: relative;
-
-        .t-input--suffix {
-            height: 100%;
-            position: absolute;
-            right: 5px;
-            top: 0;
-            color: #c0c4cc;
-        }
-
-        .t-input--inner {
-            padding-right: 25px;
-        }
+    &:focus {
+      outline: none;
+      border-color: $--input-hover-color;
     }
-
-    &.t-input-group {
-        line-height: normal;
-        display: inline-table;
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-
-        .t-input--inner {
-            display: table-cell;
-        }
-
-        .t-input--prepend, .t-input--append {
-            background-color: $--background-color-base;
-            color: $--color-info;
-            vertical-align: middle;
-            display: table-cell;
-            position: relative;
-            border: 1px solid $--color-text-placeholder;
-            border-radius: $--input-border-radius;
-            padding: 0 10px;
-            width: 1px;
-            white-space: nowrap;
-
-            &:focus {
-                outline: none;
-            }
-        }
-
-        .t-input--prepend {
-            border-right: 0;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-
-            .t-input--inner {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-        }
-
-        .t-input--append {
-            border-left: 0;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-
-            .t-input--inner {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-        }
-    }
-}
-
-
-.t-input--medium {
-
-    font-size: $--input-medium-font-size;
-
-    .t-input--inner {
-        height: $--input-medium-height;
-        line-height: $--input-medium-height;
-    }
-
-    &.t-input--group-suffix .t-input--suffix,
-    &.t-input--group-prefix .t-input--prefix {
-        i {
-            line-height: $--input-medium-height;
-        }
-    }
-}
-
-.t-input--small {
-    font-size: $--input-small-font-size;
-
-    .t-input--inner {
-        height: $--input-small-height;
-        line-height: $--input-small-height;
-    }
-
-    &.t-input--group-suffix .t-input--suffix,
-    &.t-input--group-prefix .t-input--prefix {
-        i {
-            line-height: $--input-small-height;
-        }
-    }
-}
-
-.t-input--mini {
-
-    font-size: $--input-mini-font-size;
-
-    .t-input--inner {
-        height: $--input-mini-height;
-        line-height: $--input-mini-height;
-    }
-
-    &.t-input--group-suffix .t-input--suffix,
-    &.t-input--group-prefix .t-input--prefix {
-        i {
-            line-height: $--input-mini-height;
-        }
-    }
+  }
 }
