@@ -30,7 +30,8 @@ let webpackConfig = {
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
-            '@': path.resolve(process.cwd(), './examples')
+            '@': path.resolve(process.cwd(), './examples'),
+            '@src': path.resolve(process.cwd(), './src')
         }
     },
     output: {

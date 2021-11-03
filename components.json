@@ -11,5 +11,6 @@
     "tag": "./components/tag/index.js",
     "alert": "./components/alert/index.js",
     "message": "./components/message/index.js",
-    "modal": "./components/modal/index.js"
+    "modal": "./components/modal/index.js",
+    "dialog": "./components/dialog/index.js"
 }

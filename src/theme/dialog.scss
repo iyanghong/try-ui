@@ -1,0 +1,63 @@
+@mixin icon-type($type, $color) {
+  &.t-dialog--icon-#{$type} {
+    color: $color;
+  }
+}
+
+@include icon-type(success, $--color-success);
+@include icon-type(warning, $--color-warning);
+@include icon-type(danger, $--color-danger);
+
+
+.t-dialog--wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+
+  .t-dialog {
+    position: relative;
+    margin: 15vh auto 50px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 400px;
+    background: #fff;
+
+    .t-dialog--header {
+      font-size: 16px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .t-dialog--title {}
+
+      .t-dialog--icon {
+        cursor: pointer;
+      }
+    }
+
+    .t-dialog--body {
+      font-size: 14px;
+      padding-left: 30px;
+    }
+
+    .t-dialog--footer {
+      padding: 12px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+
+      .t-button {
+        margin-right: 5px;
+      }
+    }
+  }
+}

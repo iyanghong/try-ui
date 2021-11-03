@@ -11,29 +11,33 @@ import Tag from './components/tag/index.js';
 import Alert from './components/alert/index.js';
 import Message from './components/message/index.js';
 import Modal from './components/modal/index.js';
+import Dialog from './components/dialog/index.js';
 
 const components = [
   Input,
-  Button,
-  ButtonGroup,
-  Tooltip,
-  Col,
-  Row,
-  Space,
-  Scrollbar,
-  Select,
-  Tag,
-  Alert,
-  Message,
-  Modal
+    Button,
+    ButtonGroup,
+    Tooltip,
+    Col,
+    Row,
+    Space,
+    Scrollbar,
+    Select,
+    Tag,
+    Alert,
+    Message,
+    Modal,
+    Dialog
 ];
 
 
 const install = (Vue) => {
   components.forEach(component => {
     Vue.component(component.name, component);
-    Vue.prototype.$message = Message;
+
   });
+  Vue.prototype.$message = Message;
+  Vue.prototype.$dialog = Dialog;
 }
 
 
@@ -41,16 +45,17 @@ export default {
   version: '0.0.1',
   install,
   Input,
-  Button,
-  ButtonGroup,
-  Tooltip,
-  Col,
-  Row,
-  Space,
-  Scrollbar,
-  Select,
-  Tag,
-  Alert,
-  Message,
-  Modal
+    Button,
+    ButtonGroup,
+    Tooltip,
+    Col,
+    Row,
+    Space,
+    Scrollbar,
+    Select,
+    Tag,
+    Alert,
+    Message,
+    Modal,
+    Dialog
 }

@@ -71,6 +71,10 @@
           "title": "消息提示"
         },
         {
+          "path": "/dialog",
+          "title": "对话框"
+        },
+        {
           "path": "/modal",
           "title": "模态框"
         }
