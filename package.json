@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --mode development --config ./build/webpack.demo.js",
-        "deploy:example": "cross-env NODE_ENV=production PUBLIC_PATH=/try-ui/ webpack --mode production --config ./build/webpack.demo.js",
+        "deploy:page": "sh ./build/bin/deploy-page.sh",
+        "build:page": "cross-env NODE_ENV=production PUBLIC_PATH=/try-ui/ webpack --mode production --config ./build/webpack.demo.js",
         "build:all-entry": "npm run build:entry && npm run build:theme-entry && npm run build:example-styles",
         "build:entry": "node ./build/build-entry.js",
         "build:theme-entry": "node ./build/build-theme-entry.js",
